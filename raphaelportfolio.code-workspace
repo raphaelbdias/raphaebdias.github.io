@@ -1,9 +1,6 @@
 {
 	"folders": [
 		{
-			"path": "../../../Documents/GitHub/Beelzebub3122.github.io"
-		},
-		{
 			"path": "."
 		},
 		{
@@ -13,5 +10,7 @@
 			"path": "../static"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Beelzebub3122.github.io"
+	}
 }
