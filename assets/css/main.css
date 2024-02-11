@@ -181,7 +181,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "Apple Braille";
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
@@ -245,7 +245,7 @@ input, select, textarea {
 
 	code {
 		border: solid 2px;
-		font-family: "Courier New", monospace;
+		font-family: "Apple Braille";
 		font-size: 0.9rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
@@ -253,7 +253,7 @@ input, select, textarea {
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+		font-family: "Apple Braille";
 		font-size: 0.9rem;
 		margin: 0 0 2rem 0;
 	}
