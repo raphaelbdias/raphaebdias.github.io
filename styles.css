@@ -111,6 +111,7 @@ main.about {
     padding-left: 20px; /* Add some spacing between the photo and content */
     height: 800px;
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .about-content h2 {
