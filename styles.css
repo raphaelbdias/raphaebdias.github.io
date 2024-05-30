@@ -51,6 +51,7 @@ body {
 /* Style the main content */
 main {
     text-align: center;
+    max-width: 70%;
 }
 
 nav ul {
@@ -307,6 +308,7 @@ main.projects {
     color: #9b9999;
     font-size: 20px;
     text-decoration: underline;
+    transition: color 0.3s, font-size 0.3s;
 }
 
 .project-date, .project-name {
