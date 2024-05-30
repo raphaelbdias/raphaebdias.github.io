@@ -90,6 +90,7 @@ main.about {
     display: flex;
     align-items: flex-start; /* Align items to the start of the flex container */
     padding-top: 80px; /* Space for the back button */
+    scrollbar-width: none;
 }
 
 /* Style the about photo */
@@ -306,7 +307,7 @@ main.projects {
 
 .project-title:hover {
     color: #9b9999;
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: underline;
     transition: color 0.3s, font-size 0.3s;
 }
