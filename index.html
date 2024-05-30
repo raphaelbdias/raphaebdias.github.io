@@ -1,156 +1,77 @@
-<!DOCTYPE HTML>
-<!--
-   This is a template downloaded from HTML5
-   Massively by HTML5 UP
-   html5up.net | @ajlkn
-   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-   -->
-<html>
-   <head>
-     
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WRQNZLB8J0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #typed-message {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid black;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+            margin-top: 50px; /* Adjust spacing from top */
+            margin-bottom: 50px;
+        }
 
-  gtag('config', 'G-WRQNZLB8J0');
-</script>
-      <link rel="shortcut icon" href="https://raphaeldias.me/images/title_name.png" />
-      <title>Raphael D.</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-      <link rel="stylesheet" href="https://raphaeldias.me/assets/css/main.css" />
-      <noscript>
-         <link rel="stylesheet" href="https://raphaeldias.me/assets/css/noscript.css" />
-      </noscript>
-   </head>
-   <body class="is-preload">
-      <!-- Wrapper -->
-      <div id="wrapper" class="fade-in">
-      <!-- Intro -->
-      <div id="intro">
-         <h1>
-            I am <b>Raphael Dias</b>
-         </h1>
-         <p2>Data Analyst, Machine Learning Developer and a Python Developer</p2>
-         <ul class="actions">
-            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-         </ul>
-      </div>
-      <!-- Header -->
-      <header id="header">
-         <a href="/" class="logo">Summary</a>
-      </header>
-      <!-- Nav -->
-  
-      <nav id="nav">
-         <ul class="links">
-            <li class="active"><a href="index.html">About me</a></li>
-            <li><a href="/generic.html">Key Projects</a></li>
-           <li><a href="https://raphaeldias.me/professional.html">Work Experience</a></li>
-            <li><a href="https://raphaeldias.me/elements.html">Education Summary</a></li>
-         </ul>
-         <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/disaraphael/" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/raphaelbdias" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-         </ul>
-      </nav>
-      <!-- Main -->
-      <div id="main">
-         <!-- Featured Post -->
-         <article class="post featured">
-            <header class="major">
-               <span class="date">March 2024</span>
-               <h3><a>Data Analysis</a>
-               </h3>
-               <p3>
-                  Data analytics and machine learning professional with 3+ years of experience across diverse industries, including services, 
-                  consumer brands, med-tech, education, transportation, logistics, predictive maintenance, and weather sectors. 
-                  Skilled in building data pipelines and translating data into actionable insights for strategic decision-making. 
-                  Proficient in quantitative analysis and Python programming.
-               </p3>   
+        nav {
+            display: none; /* Initially hide navigation */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 2s ease-in-out; /* Fade-in transition effect */
+        }
 
-               <br>
+        .show-nav {
+            display: block; /* Show navigation when scrolled */
+            opacity: 1; /* Fade in navigation */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="typed-message"></div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="about.html">&gt; About me</a></li>
+                <li><a href="projects.html">&gt; Projects</a></li>
+                <li><a href="services.html">&gt; Services</a></li>
+                <li><a href="contact.html">&gt; Contact</a></li>
+            </ul>
+        </nav>
+    </main>
 
-               <h3>Download my resume</h3>
+    <script>
+        // JavaScript to type out the message and reveal navigation
+        const message = "Hello! I am Raphael, a data analyst. I create web apps, dashboards and API's";
+        let i = 0;
+        const speed = 50; // Typing speed in milliseconds
+        const revealDelay = 1500; // Delay in milliseconds before revealing navigation
 
-               <div style="display: flex; margin: auto;">
-                  <div style="flex: 1;">
-                    <a href="https://raphaeldias.me/images/Raphael Dias Resume March 2024.pdf" download>
-                    <img src="https://raphaeldias.me/images/resume_march24.png" alt="W3Schools" width="300" height="200">
-                    </a>
-               </div>
-            </article>
+        function typeWriter() {
+            if (i < message.length) {
+                document.getElementById("typed-message").innerHTML += message.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                // Once typing is complete, reveal navigation after a delay
+                setTimeout(revealNavigation, revealDelay);
+            }
+        }
 
+        function revealNavigation() {
+            document.getElementById("navbar").style.display = "block";
+            document.getElementById("navbar").classList.add('show-nav'); // Apply fade-in effect
+        }
 
-              <!-- <ul class="actions special">
-               <li><a href="https://raphaeldias.raphaeldias4.repl.co/projects" class="button">CHECK OUT MY OPEN PROJECTS</a></li>
-            </ul> -->
-            </header>
-<!--             <a href="#" class="image main"><img src="images/img_01.png" alt="" /></a>
-            <ul class="actions special">
-               <li><a href="#" class="button large">Full Story</a></li>
-            </ul> -->
-
-
-  <!-- Footer -->
-  <footer id="footer">
-   <section>
-      <form method="post" action="#">
-         <div class="fields">
-            <div class="field">
-               <label for="name">Name</label>
-               <input type="text" name="name" id="name" />
-            </div>
-            <div class="field">
-               <label for="email">Email</label>
-               <input type="text" name="email" id="email" />
-            </div>
-            <div class="field">
-               <label for="message">Message</label>
-               <textarea name="message" id="message" rows="3"></textarea>
-            </div>
-         </div>
-         <ul class="actions">
-            <li><input type="submit" value="Send Message" /></li>
-         </ul>
-      </form>
-   </section>
-   <section class="split contact">
-      <section class="alt">
-         <h3>Address</h3>
-         <p>883 Bancroft Dr<br />
-            Greater Sudbury, ON P3B 1P8
-         </p>
-      </section>
-      <section>
-         <h3>Phone</h3>
-         <p><a href="+1 647 281 1283">+1 (647) 281-1283</a></p>
-      </section>
-      <section>
-         <h3>Email</h3>
-         <p><a href="mailto:diasraphael31@gmail.com">diasraphael31@gmail.com</a></p>
-      </section>
-      <section>
-         <h3>Social</h3>
-         <ul class="icons alt">
-
-               <li><a href="https://www.linkedin.com/in/raphael-dias22/" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
-               <li><a href="https://github.com/Beelzebub3122" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-            </ul>   
-           </section>
-   </section>
-</footer>
-
-      <!-- Scripts -->
-      <script src="https://raphaeldias.me/assets/js/jquery.min.js"></script>
-      <script src="https://raphaeldias.me/assets/js/jquery.scrollex.min.js"></script>
-      <script src="https://raphaeldias.me/assets/js/jquery.scrolly.min.js"></script>
-      <script src="https://raphaeldias.me/assets/js/browser.min.js"></script>
-      <script src="https://raphaeldias.me/assets/js/breakpoints.min.js"></script>
-      <script src="https://raphaeldias.me/assets/js/util.js"></script>
-      <script src="https://raphaeldias.me/assets/js/main.js"></script>
-   </body>
+        // Start typing when the page loads
+        window.onload = function() {
+            typeWriter();
+        };
+    </script>
+</body>
 </html>

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../venv"
+		},
+		{
+			"path": "../static"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Beelzebub3122.github.io"
+	}
+}

@@ -1,0 +1,345 @@
+/* Apply the Open Sans font */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
+}
+
+/* Style the back button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px; /* Make the button larger */
+    font-weight: 300; /* Use a thin font weight */
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.back-button:hover {
+    color: #555;
+    font-size: 28px; /* Slightly reduce size on hover for effect */
+}
+
+
+/* Style the next button */
+.next-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px; /* Make the button larger */
+    font-weight: 300; /* Use a thin font weight */
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, font-size 0.3s;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.next-button:hover {
+    color: #555;
+    font-size: 28px; /* Slightly reduce size on hover for effect */
+}
+/* Style the main content */
+main {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    transform: translateY(20px); /* Push the list down initially */
+    transition: transform 5s ease-in-out; /* Smooth transition for transform */
+}
+
+nav ul li {
+    margin: 15px 0;
+    text-align: justify;
+    transition: transform 5s ease-in-out; /* Smooth transition for transform */
+
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 400; /* Non-bold font weight */
+    transition: color 0.3s, font-size 0.3s; /* Added font-size transition */
+}
+
+nav ul li a:hover {
+    color: #555; /* Change color to grey on hover */
+    text-decoration: none;
+    font-size: 32px; /* Reduce font size on hover */
+}
+/* Style the main content */
+main.about {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    padding-top: 80px; /* Space for the back button */
+}
+
+/* Style the about photo */
+.about-photo {
+    flex: 0 0 33.33%; /* Take 1/3 of the available space and don't grow or shrink */
+    max-width: 33.33%; /* Ensure it doesn't exceed 1/3 of the viewport */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.about-photo img {
+    max-width: 60%; /* Ensure the photo doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style the about content */
+.about-content {
+    flex: 1; /* Allow the content to take up the remaining space */
+    padding-left: 20px; /* Add some spacing between the photo and content */
+    height: 800px;
+    overflow-y: scroll;
+}
+
+.about-content h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.about-content p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.5; /* Improved readability */
+}
+/* Style the about summary */
+.about-summary {
+    text-align: justify;
+    flex: 1; /* Allow the summary to grow to fill available space */
+    overflow-y: auto; /* Add vertical scroll if content exceeds height */
+    margin-right: 300px;
+}
+
+.about-summary h1 {
+    color: #333;
+    font-size: 48px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+}
+.about-summary h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: lighter;
+}
+
+.about-summary p {
+    color: #555;
+    font-size: 20px;
+    line-height: 1.5; /* Improved readability */
+    font-weight: 200;
+}
+
+
+/* Style the skills section */
+.skills {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between skill items */
+    margin-top: 20px;
+}
+
+.skill {
+    flex: 1;
+}
+
+
+.skill-button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    color: #333;
+    font-size: 20px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: light;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s;
+}
+/* Skill bar styles */
+.skill-bar {
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.python {
+    width: 90%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.sql {
+    width: 60%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.bi {
+    width: 75%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.skill-button:hover {
+    background-color: #8f8e8e;
+}
+
+.skill-content {
+    display: none;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.skill-content p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Style the projects section */
+main.projects {
+    padding-top: 100px; /* Space for the back button */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    max-width: 1200px; /* Constrain width for better readability */
+    margin: auto;
+    overflow-y:scroll;
+    scrollbar-width: none;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+.projects h1 {
+    color: #333;
+    font-size: 35px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+    text-align: justify;
+}
+
+.projects h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%; /* Ensure project div takes full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.project-body {
+    display: flex;
+    flex-direction: row; /* Align image and description side by side */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.project img {
+    width: 40%; /* Ensure the image fills its container while maintaining aspect ratio */
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 20px;
+}
+
+.project-description {
+    font-size: 18px;
+    font-weight: 300;
+    color: #555;
+    flex: 1; /* Allow description to take up remaining space */
+    margin-top: 0; /* Remove default margin for better alignment */
+    line-height: 30px;
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+    transition: color 0.3s;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.project-role {
+    font-size: 18px;
+    font-weight: 250;
+    color: #333;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.project-title:hover {
+    color: #555;
+}
+
+.project-date, .project-name {
+    font-size: 18px;
+    color: #777;
+    margin: 5px 0;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #a7a5a5c8;
+}
+
+.contact-logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-right: 20px;
+}
