@@ -304,7 +304,9 @@ main.projects {
 }
 
 .project-title:hover {
-    color: #555;
+    color: #9b9999;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 .project-date, .project-name {
