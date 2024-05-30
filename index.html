@@ -62,6 +62,8 @@
             } else {
                 // Once typing is complete, reveal navigation after a delay
                 setTimeout(revealNavigation, revealDelay);
+                // Store in localStorage that the typing effect has been shown
+                localStorage.setItem('typingEffectShown', 'true');
             }
         }
 
@@ -72,7 +74,14 @@
 
         // Start typing when the page loads
         window.onload = function() {
-            typeWriter();
+            // Check if the typing effect has been shown before
+            if (!localStorage.getItem('typingEffectShown')) {
+                typeWriter();
+            } else {
+                // If it has been shown, display the full message and show navigation immediately
+                document.getElementById("typed-message").innerHTML = message;
+                revealNavigation();
+            }
         };
     </script>
 </body>
