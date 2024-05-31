@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    /* width: 100vh; */
+    width: 100vh;
     background-color: #f4f4f4;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 
@@ -17,8 +17,8 @@ body {
 /* Style the back button */
 .back-button {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 20vh;
+    left: 20vh;
     font-size: 30vh; /* Make the button larger */
     font-weight: 300; /* Use a thin font weight */
     text-decoration: none;
@@ -35,8 +35,8 @@ body {
 /* Style the next button */
 .next-button {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 20vh;
+    right: 20vh;
     font-size: 30vh; /* Make the button larger */
     font-weight: 300; /* Use a thin font weight */
     text-decoration: none;
@@ -170,14 +170,14 @@ main.about {
 
 .skill-button {
     width: 100%;
-    padding: 10px;
+    padding: 10vh;
     text-align: left;
     color: #333;
     font-size: 20vh;
     margin-top: 0; /* Remove default margin */
     font-weight: light;
     background-color: #f4f4f4;
-    border: 1px solid #ddd;
+    border: 1vh solid #ddd;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     transition: background-color 0.3s;
@@ -217,17 +217,17 @@ main.about {
     display: none;
     background-color: #f4f4f4;
     padding: 10vh;
-    border: 1px solid #ddd;
+    border: 1vh solid #ddd;
 }
 
 .skill-content p {
-    margin: 5px 0;
-    font-size: 16px;
+    margin: 5vh 0;
+    font-size: 16vh;
 }
 
 /* Style the projects section */
 main.projects {
-    padding-top: 100px; /* Space for the back button */
+    padding-top: 100vh; /* Space for the back button */
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
