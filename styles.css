@@ -110,21 +110,21 @@ main.about {
 /* Style the about content */
 .about-content {
     flex: 1; /* Allow the content to take up the remaining space */
-    padding-left: 20vh; /* Add some spacing between the photo and content */
-    height: 800vh;
+    padding-left: 2vh; /* Add some spacing between the photo and content */
+    height: 80vh;
     overflow-y: scroll;
     scrollbar-width: none;
 }
 
 .about-content h2 {
     color: #333;
-    font-size: 24vh;
+    font-size: 2vh;
     font-weight: 600;
 }
 
 .about-content p {
     color: #555;
-    font-size: 18vh;
+    font-size: 1vh;
     line-height: 1.5; /* Improved readability */
 }
 /* Style the about summary */
@@ -132,25 +132,25 @@ main.about {
     text-align: justify;
     flex: 1; /* Allow the summary to grow to fill available space */
     overflow-y: auto; /* Add vertical scroll if content exceeds height */
-    margin-right: 300vh;
+    margin-right: 30vh;
 }
 
 .about-summary h1 {
     color: #333;
-    font-size: 48vh;
+    font-size: 4vh;
     margin-top: 0; /* Remove default margin */
     font-weight: normal;
 }
 .about-summary h2 {
     color: #333;
-    font-size: 24vh;
+    font-size: 2vh;
     margin-top: 0; /* Remove default margin */
     font-weight: lighter;
 }
 
 .about-summary p {
     color: #555;
-    font-size: 20vh;
+    font-size: 2vh;
     line-height: 1.5; /* Improved readability */
     font-weight: 200;
 }
@@ -160,7 +160,7 @@ main.about {
 .skills {
     display: flex;
     justify-content: space-between; /* Distribute space evenly between skill items */
-    margin-top: 20vh;
+    margin-top: 2vh;
 }
 
 .skill {
@@ -170,10 +170,10 @@ main.about {
 
 .skill-button {
     width: 100%;
-    padding: 10vh;
+    padding: 1vh;
     text-align: left;
     color: #333;
-    font-size: 20vh;
+    font-size: 2vh;
     margin-top: 0; /* Remove default margin */
     font-weight: light;
     background-color: #f4f4f4;
@@ -184,8 +184,8 @@ main.about {
 }
 /* Skill bar styles */
 .skill-bar {
-    height: 20vh;
-    margin-bottom: 10vh;
+    height: 2vh;
+    margin-bottom: 1vh;
 }
 
 .python {
@@ -227,7 +227,7 @@ main.about {
 
 /* Style the projects section */
 main.projects {
-    padding-top: 100vh; /* Space for the back button */
+    padding-top: 10vh; /* Space for the back button */
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
