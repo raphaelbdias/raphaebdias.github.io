@@ -8,6 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vh;
     background-color: #f4f4f4;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 
@@ -18,7 +19,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-size: 30px; /* Make the button larger */
+    font-size: 30vh; /* Make the button larger */
     font-weight: 300; /* Use a thin font weight */
     text-decoration: none;
     color: #333;
@@ -27,7 +28,7 @@ body {
 
 .back-button:hover {
     color: #555;
-    font-size: 28px; /* Slightly reduce size on hover for effect */
+    font-size: 28vh; /* Slightly reduce size on hover for effect */
 }
 
 
