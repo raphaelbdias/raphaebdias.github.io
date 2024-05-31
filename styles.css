@@ -17,9 +17,9 @@ body {
 /* Style the back button */
 .back-button {
     position: fixed;
-    top: 20vh;
-    left: 20vh;
-    font-size: 30vh; /* Make the button larger */
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh; /* Make the button larger */
     font-weight: 300; /* Use a thin font weight */
     text-decoration: none;
     color: #333;
@@ -28,16 +28,16 @@ body {
 
 .back-button:hover {
     color: #555;
-    font-size: 28vh; /* Slightly reduce size on hover for effect */
+    font-size: 2vh; /* Slightly reduce size on hover for effect */
 }
 
 
 /* Style the next button */
 .next-button {
     position: fixed;
-    top: 20vh;
-    right: 20vh;
-    font-size: 30vh; /* Make the button larger */
+    top: 2vh;
+    right: 2vh;
+    font-size: 3vh; /* Make the button larger */
     font-weight: 300; /* Use a thin font weight */
     text-decoration: none;
     color: #333;
@@ -47,7 +47,7 @@ body {
 
 .next-button:hover {
     color: #555;
-    font-size: 28vh; /* Slightly reduce size on hover for effect */
+    font-size: 2vh; /* Slightly reduce size on hover for effect */
 }
 /* Style the main content */
 main {
@@ -63,12 +63,12 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: left;
-    transform: translateY(20vh); /* Push the list down initially */
+    transform: translateY(2vh); /* Push the list down initially */
     transition: transform 5s ease-in-out; /* Smooth transition for transform */
 }
 
 nav ul li {
-    margin: 15vh 0;
+    margin: 1vh 0;
     text-align: justify;
     transition: transform 5s ease-in-out; /* Smooth transition for transform */
 
