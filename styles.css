@@ -77,7 +77,7 @@ nav ul li {
 nav ul li a {
     color: #333;
     text-decoration: none;
-    font-size: 36vh;
+    font-size: 3vh;
     font-weight: 400; /* Non-bold font weight */
     transition: color 0.3s, font-size 0.3s; /* Added font-size transition */
 }
@@ -85,13 +85,13 @@ nav ul li a {
 nav ul li a:hover {
     color: #555; /* Change color to grey on hover */
     text-decoration: none;
-    font-size: 32vh; /* Reduce font size on hover */
+    font-size: 2vh; /* Reduce font size on hover */
 }
 /* Style the main content */
 main.about {
     display: flex;
     align-items: flex-start; /* Align items to the start of the flex container */
-    padding-top: 80vh; /* Space for the back button */
+    padding-top: 20vh; /* Space for the back button */
     scrollbar-width: none;
 }
 
