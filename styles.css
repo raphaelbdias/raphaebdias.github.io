@@ -85,12 +85,12 @@ main.about {
 }
 
 .about-photo {
-    max-width: 100%; /* Ensure it doesn't exceed viewport width */
+    max-width: 30%; /* Ensure it doesn't exceed viewport width */
     overflow: hidden; /* Hide overflow content */
 }
 
 .about-photo img {
-    max-width: 100%; /* Ensure the photo doesn't exceed its container */
+    max-width: 30%; /* Ensure the photo doesn't exceed its container */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -231,7 +231,7 @@ main.projects {
     border: 1px solid #ddd;
     padding: 20px;
     background-color: #fff;
-    width: 100%; /* Ensure project div takes full width */
+    width: 70%; /* Ensure project div takes full width */
     box-sizing: border-box; /* Include padding and border in width */
 }
 
