@@ -351,3 +351,46 @@ main.projects {
     height: 50px; /* Adjust size as needed */
     margin-right: 20px;
 }
+
+/* Ensure wrapper takes full width and applies some padding */
+#wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style for the Tableau visualizations */
+.tableauPlaceholder {
+    margin: 20px 0;
+    width: 100%;
+    /* Maintain a 4:3 aspect ratio */
+    padding-bottom: 75%;
+    position: relative;
+}
+
+/* Ensure the Tableau objects take full size of the container */
+.tableauViz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style the paragraph */
+p {
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #wrapper {
+        padding: 10px;
+    }
+
+    .tableauPlaceholder {
+        padding-bottom: 100%;
+    }
+}
