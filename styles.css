@@ -216,13 +216,12 @@ main.about {
 .skill-content {
     display: none;
     background-color: #f4f4f4;
-    padding: 10vh;
     border: 1vh solid #ddd;
+    padding: 2.5px;
 }
 
 .skill-content p {
-    margin: 5vh 0;
-    font-size: 16vh;
+    font-size: 15px;
 }
 
 /* Style the projects section */
