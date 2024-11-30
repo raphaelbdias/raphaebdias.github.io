@@ -383,17 +383,6 @@ p {
     color: #333;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #wrapper {
-        padding: 10px;
-    }
-
-    .tableauPlaceholder {
-        padding-bottom: 100%;
-    }
-}
-
 
 /* Dashboard Layout */
 .dashboard {
