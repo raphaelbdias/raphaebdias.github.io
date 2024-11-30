@@ -393,3 +393,36 @@ p {
         padding-bottom: 100%;
     }
 }
+
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Chart Container */
+.chart-container {
+    flex: 1 1 calc(50% - 40px); /* Two columns with gap adjustment */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.chart-container h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #6200EE; /* Primary color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chart-container {
+        flex: 1 1 100%; /* Single column on smaller screens */
+    }
+}
