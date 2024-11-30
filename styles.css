@@ -14,24 +14,6 @@ body {
 }
 
 
-.header {
-    text-align: center;
-    background-color: #6200EE; /* Primary color */
-    color: #FFFFFF;
-    padding: 20px 0;
-}
-
-.intro {
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
 /* Style the back button */
 .back-button {
     position: fixed;
@@ -391,6 +373,8 @@ dash-body {
     padding: 0;
     background-color: #f4f4f4;
     color: #000;
+    height: 100%;
+
 }
 
 /* Header Section */
@@ -401,6 +385,9 @@ dash-body {
     padding: 20px;
     font-size: 20px;
     font-weight: bold;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
 }
 
 /* Intro Section */
