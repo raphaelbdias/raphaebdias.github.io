@@ -2,74 +2,75 @@
 
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #000;
-    color: #0f0;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 16px;
-  }
-  
-  /* INTRO SCREEN (covers everything until hidden) */
-  #intro-screen {
-    position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #000;
-    color: #0f0;
-    text-align: left;
-    padding: 20px;
-    z-index: 9999;
-  }
-  #intro-text {
-    white-space: pre-wrap;
-    max-width: 80%;
-  }
-  .hidden {
-    display: none !important;
-  }
-  
-  /* MAIN TERMINAL */
-  #terminal {
-    width: 100vw;
-    height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-  }
-  #terminal-output {
-    white-space: pre-wrap;
-    line-height: 1.4;
-  }
-  
-  /* Inline Prompt Container */
-  .inline-prompt {
-    display: inline-flex; 
-    align-items: baseline;
-    margin-top: 5px;
-  }
-  
-  /* Static “<?>” (no blinking) */
-  .blinking-cursor {
-    display: inline-block;
-    margin: 0 5px;
-    /* Removed animation property, so it stays static */
-  }
-  
-  /* The inline text input */
-  .inline-prompt input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #0f0;
-    font-family: "Courier New", Courier, monospace;
-    caret-color: #0f0;
-    width: 200px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+
+/* INTRO SCREEN (covers everything until hidden) */
+#intro-screen {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: #0f0;
+  text-align: left;
+  padding: 20px;
+  z-index: 9999;
+}
+#intro-text {
+  white-space: pre-wrap;
+  max-width: 80%;
+}
+.hidden {
+  display: none !important;
+}
+
+/* MAIN TERMINAL */
+#terminal {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+#terminal-output {
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+/* Inline Prompt Container */
+.inline-prompt {
+  display: inline-flex; 
+  align-items: baseline;
+  margin-top: 5px;
+}
+
+/* Static “<?>” (no blinking) */
+.blinking-cursor {
+  display: inline-block;
+  margin: 0 5px;
+  /* Removed animation property, so it stays static */
+}
+
+/* The inline text input */
+.inline-prompt input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  caret-color: #0f0;
+  width: 200px;
+}
+
+

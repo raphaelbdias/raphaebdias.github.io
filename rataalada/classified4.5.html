@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GCPD Classified File #047</title>
+  <link rel="icon" href="https://raphaeldias.me/rataalada/gcpd.png" type="image/png">
+  <link rel="stylesheet" href="https://raphaeldias.me/rataalada/classified.css">
+  <style>
+    /* Specific styles for this file */
+    .attachment {
+      margin-top: 30px;
+      border: 2px dashed #000;
+      padding: 15px;
+      background-color: #f9f9f9;
+    }
+    .attachment h4 {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .payment-records {
+      border: 1px solid #000;
+      padding: 10px;
+      background-color: #fff;
+      font-family: monospace; /* Makes it look like official ledger text */
+    }
+    .handwritten-notes {
+      font-family: "Permanent Marker", "Caveat", cursive;
+      color: #444;
+      font-size: 0.95rem;
+      margin-top: 20px;
+      line-height: 1.4;
+    }
+    .payment-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .payment-table th,
+    .payment-table td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: left;
+    }
+    .payment-table th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document-header">
+    <img src="https://raphaeldias.me/rataalada/gcpd.png" alt="GCPD Logo" class="logo">
+    <div class="header-text">
+      <h1>GOTHAM CITY POLICE DEPARTMENT</h1>
+      <h2>MAJOR CRIMES UNIT</h2>
+      <div class="stamp">CLASSIFIED</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="document-body">
+    <h3>FILE #047 – FALCONE’S ENFORCER / WAYNE BRIBERY SCANDAL</h3>
+    <p class="confidential">CONFIDENTIAL – EYES ONLY</p>
+
+    <p><strong>[ BEGIN TRANSCRIPT EXCERPT ]</strong></p>
+
+    <p>
+      <strong>DATE:</strong> <span class="redacted">[REDACTED]</span> &emsp;
+      <strong>TIME:</strong> <span class="redacted">[REDACTED]</span> &emsp;
+      <strong>LOCATION:</strong> GCPD MAJOR CRIMES UNIT
+    </p>
+
+    <p>
+      <strong>TO:</strong> <span class="redacted">***ASSISTANT DA [NAME REDACTED]***</span><br>
+      <strong>FROM:</strong> <span class="redacted">***[DETECTIVE BULLICK, MCU]***</span>
+    </p>
+
+    <p>
+      <strong>SUBJECT:</strong> SUSPECTED ENFORCER INVOLVEMENT IN WAYNE ENT. BRIBERY SCANDAL
+    </p>
+
+    <p class="summary-text">
+      <em>CONFIDENTIAL SUMMARY:</em><br>
+      Intelligence suggests the Falcone crime family enlisted 
+      <span class="redacted">“Vincent ‘The Hammer’ Galeotti”</span> 
+      to oversee enforcement operations and bribe key city officials. Links to Wayne Enterprises 
+      have been identified in the form of suspicious campaign contributions 
+      and infrastructure kickbacks.
+    </p>
+
+    <div class="blockquote">
+      <strong>SELECTED EVIDENCE FRAGMENTS:</strong>
+      <ul>
+        <li>"<span class="redacted">Galeotti: If Wayne doesn’t deliver, you make sure he learns what happens when people cross Falcone.</span>"</li>
+        <li>"<span class="redacted">Falcone: Bribery works best when it’s quiet. Noise attracts bats."</span></li>
+        <li>"<span class="redacted">Witness Statement: Galeotti’s crew cornered the city council rep just before the budget vote. She looked scared.</span>"</li>
+      </ul>
+    </div>
+
+    <div class="cypher-fragment">
+      <p>ADDITIONAL CIPHER FRAGMENT:</p>
+      <pre>
+“CER-47/DOCKS-________/”
+      </pre>
+      <p>Decrypt fragment suggests ties to financial laundering schemes. Full cipher pending.</p>
+    </div>
+
+    <p><strong>[ END TRANSCRIPT EXCERPT ]</strong></p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="attachment docket-style">
+    <h4>Attachment: Bribe-Related Payment Records</h4>
+  
+    <div class="payment-records">
+      <p><strong>PAYMENT TRANSACTION LOG – REFERENCE: #4701-B</strong></p>
+  
+      <table class="payment-table">
+        <thead>
+          <tr>
+            <th>DATE</th>
+            <th>PAYEE</th>
+            <th>AMOUNT</th>
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1993-03-10</td>
+            <td>City Councilor J.R.</td>
+            <td>$125,000</td>
+            <td>Campaign Contribution (Infrastructure Budget)</td>
+          </tr>
+          <tr>
+            <td>1993-04-12</td>
+            <td>Deputy Mayor</td>
+            <td>$60,000</td>
+            <td>“Community Renewal” (Dock Expansion Cover)</td>
+          </tr>
+          <tr>
+            <td>1994-01-15</td>
+            <td>Gotham Trust Bank</td>
+            <td>$1,200,000</td>
+            <td>Rail Expansion “Consulting Fees”</td>
+          </tr>
+          <tr>
+            <td>1994-02-28</td>
+            <td>City Planner B.M.</td>
+            <td>$75,000</td>
+            <td>Zoning Approval for Falcone Real Estate</td>
+          </tr>
+          <tr>
+            <td>1995-06-20</td>
+            <td>Offshore Account #7845</td>
+            <td>$2,500,000</td>
+            <td>Mayor’s Campaign Fund</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <p class="handwritten-notes">
+      <strong>Investigator’s Notes:</strong><br>
+      “Historic bribes show a pattern linked to infrastructure contracts 
+      and political influence in Gotham. Many funds seem to vanish into offshore accounts.”
+    </p>
+  </div>
+  
+
+  <script>
+    // Auto-fill today's date
+    const dateEl = document.getElementById('date');
+    const now = new Date().toLocaleDateString();
+    dateEl.textContent = now;
+  </script>
+</body>
+</html>
