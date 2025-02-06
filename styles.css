@@ -1,364 +1,437 @@
-/* Base styles */
+/* Apply the Open Sans font */
 body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* changed to start for mobile */
-  min-height: 100vh; /* let content expand naturally */
-  background-color: #f4f4f4;
-  overflow-x: hidden; /* prevent horizontal scrolling */
-  box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
 }
 
-*, *::before, *::after {
-  box-sizing: inherit; /* apply border-box everywhere */
-}
 
-/* Buttons */
-.back-button,
-.next-button {
-  position: fixed;
-  top: 2rem;
-  font-size: 1.5rem; /* an example sized for desktop */
-  font-weight: 300;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s, font-size 0.3s;
-  z-index: 1000;
-}
-
+/* Style the back button */
 .back-button {
-  left: 2rem;
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 3vh; /* Make the button larger */
+    font-weight: 300; /* Use a thin font weight */
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, font-size 0.3s;
 }
 
+.back-button:hover {
+    color: #555;
+    font-size: 2vh; /* Slightly reduce size on hover for effect */
+}
+
+
+/* Style the next button */
 .next-button {
-  right: 2rem;
+    position: fixed;
+    top: 2vh;
+    right: 2vh;
+    font-size: 3vh; /* Make the button larger */
+    font-weight: 300; /* Use a thin font weight */
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, font-size 0.3s;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
-.back-button:hover,
 .next-button:hover {
-  color: #555;
-  font-size: 1.4rem;
+    color: #555;
+    font-size: 2vh; /* Slightly reduce size on hover for effect */
 }
-
-/* Navigation / main container */
+/* Style the main content */
 main {
-  text-align: center;
-  max-width: 80%;
-  scrollbar-width: none;
-  margin-top: 5rem; /* space from fixed buttons, if needed */
+    text-align: center;
+    max-width: 80%;
+    scrollbar-width: none;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    transform: translateY(2vh); /* Push the list down initially */
+    transition: transform 5s ease-in-out; /* Smooth transition for transform */
 }
 
 nav ul li {
-  margin: 1rem 0;
-  text-align: justify;
+    margin: 1vh 0;
+    text-align: justify;
+    transition: transform 5s ease-in-out; /* Smooth transition for transform */
+
 }
 
 nav ul li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
-  transition: color 0.3s, font-size 0.3s;
+    color: #333;
+    text-decoration: none;
+    font-size: 3vh;
+    font-weight: 400; /* Non-bold font weight */
+    transition: color 0.3s, font-size 0.3s; /* Added font-size transition */
 }
 
 nav ul li a:hover {
-  color: #555;
-  font-size: 1.4rem;
+    color: #555; /* Change color to grey on hover */
+    text-decoration: none;
+    font-size: 2vh; /* Reduce font size on hover */
 }
-
-/* About Section */
+/* Style the main content */
 main.about {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 2rem;
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    padding-top: 20vh; /* Space for the back button */
+    scrollbar-width: none;
 }
 
+/* Style the about photo */
 .about-photo {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+    flex: 0 0 33.33%; /* Take 1/3 of the available space and don't grow or shrink */
+    max-width: 33.33%; /* Ensure it doesn't exceed 1/3 of the viewport */
+    overflow: hidden; /* Hide overflow content */
 }
 
 .about-photo img {
-  max-width: 80%;
-  height: auto;
+    max-width: 60%; /* Ensure the photo doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Style the about content */
 .about-content {
-  flex: 1;
-  padding-left: 2rem;
-  overflow-y: auto;
-  scrollbar-width: none;
-  max-width: 100%;
+    flex: 1; /* Allow the content to take up the remaining space */
+    padding-left: 2vh; /* Add some spacing between the photo and content */
+    height: 80vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    max-width: 100%;
 }
 
 .about-content h2 {
-  color: #333;
-  font-size: 1.2rem;
-  font-weight: 600;
+    color: #333;
+    font-size: 2vh;
+    font-weight: 600;
 }
 
 .about-content p {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
+    color: #555;
+    font-size: 1vh;
+    line-height: 1.5; /* Improved readability */
+}
+/* Style the about summary */
+.about-summary {
+    text-align: justify;
+    flex: 1; /* Allow the summary to grow to fill available space */
+    overflow-y: auto; /* Add vertical scroll if content exceeds height */
+    margin-right: 30vh;
 }
 
-/* Projects Section */
+.about-summary h1 {
+    color: #333;
+    font-size: 4vh;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+}
+.about-summary h2 {
+    color: #333;
+    font-size: 2vh;
+    margin-top: 0; /* Remove default margin */
+    font-weight: lighter;
+}
+
+.about-summary p {
+    color: #555;
+    font-size: 2vh;
+    line-height: 1.5; /* Improved readability */
+    font-weight: 200;
+}
+
+
+/* Style the skills section */
+.skills {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between skill items */
+    margin-top: 2vh;
+}
+
+.skill {
+    flex: 1;
+}
+
+
+.skill-button {
+    width: 100%;
+    padding: 1vh;
+    text-align: left;
+    color: #333;
+    font-size: 2vh;
+    margin-top: 0; /* Remove default margin */
+    font-weight: light;
+    background-color: #f4f4f4;
+    border: 1vh solid #ddd;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s;
+}
+/* Skill bar styles */
+.skill-bar {
+    height: 2vh;
+    margin-bottom: 1vh;
+}
+
+.python {
+    width: 90%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.sql {
+    width: 60%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.bi {
+    width: 75%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.skill-button:hover {
+    background-color: #8f8e8e;
+}
+
+.skill-content {
+    display: none;
+    background-color: #f4f4f4;
+    border: 1vh solid #ddd;
+    padding: 2.5px;
+}
+
+.skill-content p {
+    font-size: 15px;
+}
+
+/* Style the projects section */
 main.projects {
-  margin-top: 2rem;
-  padding: 1rem;
-  max-width: 1200px;
-  overflow-y: auto;
-  scrollbar-width: none;
-  box-sizing: border-box;
-  background-color: #fff; /* example if you want a background */
+    padding-top: 10vh; /* Space for the back button */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    max-width: 1200px; /* Constrain width for better readability */
+    margin: auto;
+    overflow-y:scroll;
+    scrollbar-width: none;
+    box-sizing: border-box; /* Include padding and border in width */
 }
-
 .projects h1 {
-  color: #333;
-  font-size: 2rem;
-  margin-top: 0;
-  font-weight: normal;
-  text-align: justify;
+    color: #333;
+    font-size: 35px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+    text-align: justify;
 }
 
 .projects h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #333;
-  margin-bottom: 1rem;
+    font-size: 32px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .project {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  background-color: #fff;
-  width: 100%;
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%; /* Ensure project div takes full width */
+    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .project-body {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin-top: 0.5rem;
-  text-align: justify;
+    display: flex;
+    flex-direction: row; /* Align image and description side by side */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 10px;
+    text-align: justify;
 }
 
 .project img {
-  width: 40%;
-  height: auto;
-  object-fit: contain;
-  margin-right: 1rem;
+    width: 40%; /* Ensure the image fills its container while maintaining aspect ratio */
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 20px;
 }
 
 .project-description {
-  font-size: 1rem;
-  font-weight: 300;
-  color: #555;
-  flex: 1;
-  margin-top: 0;
-  line-height: 1.5;
+    font-size: 18px;
+    font-weight: 300;
+    color: #555;
+    flex: 1; /* Allow description to take up remaining space */
+    margin-top: 0; /* Remove default margin for better alignment */
+    line-height: 30px;
 }
 
 .project-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #333;
-  margin: 0;
-  margin-bottom: 0.5rem;
-  text-align: justify;
-  text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+    transition: color 0.3s;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+    text-decoration: none;
 }
 
 .project-role {
-  font-size: 1rem;
-  font-weight: 250;
-  color: #333;
-  margin-left: 0.5rem;
-  margin-bottom: 1rem;
-  text-align: justify;
-  text-decoration: none;
+    font-size: 18px;
+    font-weight: 250;
+    color: #333;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+    text-decoration: none;
 }
 
 .project-title:hover {
-  color: #9b9999;
-  font-size: 1.4rem;
-  text-decoration: underline;
-  transition: color 0.3s, font-size 0.3s;
+    color: #9b9999;
+    font-size: 23px;
+    text-decoration: underline;
+    transition: color 0.3s, font-size 0.3s;
 }
 
-.project-date,
-.project-name {
-  font-size: 0.9rem;
-  color: #777;
-  margin: 0.3rem 0;
-  margin-top: 0.5rem;
-  text-align: right;
+.project-date, .project-name {
+    font-size: 18px;
+    color: #777;
+    margin: 5px 0;
+    margin-top: 10px;
+    text-align: right;
 }
 
-/* Contact links */
 .contact-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .contact-links a {
-  display: flex;
-  align-items: center;
-  margin: 0.5rem 0;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .contact-links a:hover {
-  color: #a7a5a5c8;
+    color: #a7a5a5c8;
 }
 
 .contact-logo {
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-right: 20px;
 }
 
-/* Dashboard Section (example) */
+/* Ensure wrapper takes full width and applies some padding */
+#wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Style the paragraph */
+p {
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #333;
+}
+
+dash-body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #000;
+    height: 100%;
+
+}
+
+/* Header Section */
 .header {
-  text-align: center;
-  background-color: #6200EE;
-  color: #FFFFFF;
-  padding: 1rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin: 1rem auto;
-  width: 90%;
-  max-width: 800px;
+    text-align: center;
+    background-color: #6200EE; /* Primary color */
+    color: #FFFFFF;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
 }
 
+/* Intro Section */
 .intro {
-  padding: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 1rem auto;
-  width: 90%;
-  max-width: 800px;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
 }
 
+/* Dashboard Section */
 .dashboard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
+/* Chart Container */
 .chart-container {
-  flex: 1 1 calc(50% - 2rem);
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  overflow: hidden;
-  max-width: 600px; /* for large screens */
+    flex: 1 1 calc(50% - 40px); /* Two columns with gap adjustment */
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
 }
 
 .chart-container h2 {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #6200EE;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #6200EE; /* Primary color */
 }
 
-/* Media Queries for Mobile */
-@media (max-width: 600px) {
-  /* Stack elements vertically and scale text for small screens */
-
-  body {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  .back-button,
-  .next-button {
-    font-size: 1.25rem;
-    top: 1rem;
-    left: 1rem; /* for back-button */
-    right: 1rem; /* for next-button */
-  }
-
-  main {
-    max-width: 100%;
-    margin-top: 4rem;
-    padding: 0 1rem;
-    text-align: left;
-  }
-
-  nav ul li a {
-    font-size: 1.25rem;
-  }
-
-  main.about {
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-
-  .about-photo {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .about-content {
-    padding-left: 0;
-    overflow-y: visible; /* Let content expand */
-    max-width: 100%;
-  }
-
-  main.projects {
-    padding: 1rem;
-    margin-top: 1rem;
-    max-width: 100%;
-  }
-
-  .project-body {
-    flex-direction: column;
-  }
-
-  .project img {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-
-  .chart-container {
-    flex: 1 1 100%; /* single column */
-    max-width: 100%;
-  }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chart-container {
+        flex: 1 1 100%; /* Single column on smaller screens */
+    }
 }
