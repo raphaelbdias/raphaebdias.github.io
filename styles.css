@@ -471,7 +471,7 @@ dash-body {
   }
   
   .hobby-card img {
-    max-height: 400px; /* Increased size for clarity */
+    max-height: 100px; /* Increased size for clarity */
     width: auto;
     object-fit: cover;
     border-radius: 1px;
