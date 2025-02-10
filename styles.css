@@ -20,7 +20,7 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(255, 255, 255, 0.3); /* Semi-transparent overlay */
+      background: rgba(177, 193, 193, 0.527); /* Semi-transparent overlay */
       backdrop-filter: blur(10px); /* Blur effect for a glass-like appearance */
       z-index: 1;
     }
