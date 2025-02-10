@@ -13,24 +13,6 @@ body {
 
 }
 
-  /* Glass overlay for the entire viewport */
-  .glass-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(177, 193, 193, 0.527); /* Semi-transparent overlay */
-    backdrop-filter: blur(10px); /* Blur effect for a glass-like appearance */
-    z-index: 1;
-  }
-  /* Content container that sits above the overlay */
-  .content {
-    position: relative;
-    z-index: 2;
-    padding: 50px;
-    color: #333;
-  }
 /* Style the back button */
 .back-button {
     position: fixed;
