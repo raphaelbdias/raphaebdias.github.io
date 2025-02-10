@@ -423,7 +423,7 @@ dash-body {
 }
 
 .chart-container h2 {
-    font-size: 18px;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     text-align: center;
     color: #6200EE; /* Primary color */
@@ -471,10 +471,10 @@ dash-body {
   }
   
   .hobby-card img {
-    max-height: 150px; /* Increased size for clarity */
+    max-height: 700px; /* Increased size for clarity */
     width: auto;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 1px;
     transition: transform 0.3s ease;
   }
   
