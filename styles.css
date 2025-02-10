@@ -435,3 +435,52 @@ dash-body {
         flex: 1 1 100%; /* Single column on smaller screens */
     }
 }
+
+
+.hobbies-section {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Optional: a light background for contrast */
+  }
+  
+  .hobbies-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .hobby-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+  }
+  
+  .hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .hobby-icon {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .hobby-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
