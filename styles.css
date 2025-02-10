@@ -507,64 +507,102 @@ dash-body {
   }
   
 
-  /* Main services container */
-main.services {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  /* ===================================================================
+   10. BUSINESS FOCUS SECTION
+   =================================================================== */
+
+.business-focus {
+    padding: .7rem 0;
+    background: #fff;  /* Change if needed */
   }
-  
-  main.services h1 {
+  .business-focus .business-header {
     text-align: center;
-    margin-bottom: 30px;
+    padding-bottom: 2rem;
+    background: transparent;  /* or a subtle background if desired */
   }
-  
-  /* Card container styling */
-  .card-container {
+  .business-focus .business-header h2 {
+    font-family: "Albert Sans", serif;
+    font-size: 1.5rem;
+    color: #00539c;
+    margin: 0;
+    letter-spacing: 0.05em;
+  }
+  .business-focus .business-header p {
+    max-width: 80%;
+    margin: 2rem auto;
+    font-size: 1rem;
+  }
+  .business-focus .container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .business-cards {
     display: flex;
+    gap: 2rem;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-around;
   }
-  
-  /* Individual card styling */
-  .card {
-    background-color: #fff;
-    width: 300px;
+  .business-card {
+    flex: 1 1 calc(50% - 2rem);
+    background: #f7f7f7;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Card image */
-  .card-image {
+  .business-image {
+    position: relative;
     width: 100%;
-    height: 180px;
+    padding-top: 65%;
+    overflow: hidden;
+  }
+  .business-image a {
+    display: block;
+    overflow: hidden;
+  }
+  .business-image a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the entire image is visible */
+    transition: transform .3s ease;
+  }
+  .business-image a:hover img {
+    transform: scale(0.95);
+  }
+  .business-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
-  
-  /* Card title */
-  .card-title {
-    font-size: 1.2em;
-    margin: 15px;
+  .business-content {
+    padding: 2rem;
+    text-align: center;
   }
-  
-  /* Card description */
-  .card-description {
-    font-size: 0.95em;
-    margin: 0 15px 15px;
+  .business-icon {
+    margin-bottom: 1.2rem;
   }
-  
-  /* Responsive styling */
-  @media (max-width: 768px) {
-    .card {
-      width: 90%;
-    }
+  .business-icon i {
+    font-size: 2.5rem;
+    color: #00539c;
   }
-  
+  .business-content h3 {
+    font-family: "Albert Sans", serif;
+    display: inline-block;
+    font-size: 2rem;
+    color: #00539c;
+    margin: 0;
+  }
+  .business-content h3 a {
+    color: inherit;
+    transition: font-size .3s ease;
+    text-decoration: none;
+  }
+  .business-content h3 a:hover {
+    font-size: 1.8rem; /* Reduce the size on hover */
+  }
+  .business-content p {
+    font-size: 1rem;
+    color: #333;
+  }
