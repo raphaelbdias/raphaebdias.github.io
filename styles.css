@@ -466,7 +466,7 @@ dash-body {
     display: flex;
     align-items: center;
     /* Adjust the animation duration as needed */
-    animation: scroll 20s linear infinite;
+    animation: scroll 60s linear infinite;
   }
   
   .hobby-card {
