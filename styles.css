@@ -547,7 +547,7 @@ dash-body {
     font-size: 1rem;
   }
   .business-focus .container {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
   }
 
@@ -560,7 +560,7 @@ dash-body {
 }
   .business-cards {
     display: flex;
-    padding-top: 10vh; /* Space for the back button */
+    /* padding-top: 10vh;  */
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-around;
