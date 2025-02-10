@@ -533,7 +533,13 @@ dash-body {
     width: 100%; /* Ensure project div takes full width */
     box-sizing: border-box; /* Include padding and border in width */
   }
-
+  .business-focus h1 {
+    color: #333;
+    font-size: 35px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+    text-align: justify;
+}
   .business-focus .business-header {
     text-align: center;
     padding-bottom: 2rem;
