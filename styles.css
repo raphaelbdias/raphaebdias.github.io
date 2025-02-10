@@ -8,12 +8,22 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background: url('images main/other/background1.jpg') no-repeat center center fixed;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 
 }
 
-
+    /* Glass overlay for the entire viewport */
+    .glass-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.3); /* Semi-transparent overlay */
+      backdrop-filter: blur(10px); /* Blur effect for a glass-like appearance */
+      z-index: 1;
+    }
 /* Style the back button */
 .back-button {
     position: fixed;
