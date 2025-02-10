@@ -524,22 +524,13 @@ dash-body {
 }
 .business-focus {
     padding: .7rem 0;
-    background: #fff;  /* Change if needed */
     display: flex;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
     padding: 20px;
-    background-color: #fff;
     width: 100%; /* Ensure project div takes full width */
     box-sizing: border-box; /* Include padding and border in width */
   }
-  .business-focus h1 {
-    color: #333;
-    font-size: 35px;
-    margin-top: 0; /* Remove default margin */
-    font-weight: normal;
-    text-align: justify;
-}
+
   .business-focus .business-header {
     text-align: center;
     padding-bottom: 2rem;
@@ -559,6 +550,14 @@ dash-body {
     max-width: 70%;
     margin: 0 auto;
   }
+
+  .container h1 {
+    color: #333;
+    font-size: 35px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+    text-align: justify;
+}
   .business-cards {
     display: flex;
     padding-top: 10vh; /* Space for the back button */
