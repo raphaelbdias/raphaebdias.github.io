@@ -442,13 +442,13 @@ dash-body {
     padding: 2rem 0;
     background: #fff; /* Or choose a background that fits your design */
     text-align: left;
+    margin: 5%;
   }
   
   .hobbies-slider-section h2 {
     font-family: "Open Sans", sans-serif;
     font-size: 1.6rem;
     color: #333;
-    margin: 10%;
   }
 
   .hobbies-slider-section p {
