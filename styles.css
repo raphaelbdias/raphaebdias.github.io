@@ -533,14 +533,14 @@ dash-body {
     width: 100%; /* Ensure project div takes full width */
     box-sizing: border-box; /* Include padding and border in width */
   }
-  
+
   .business-focus .business-header {
     text-align: center;
     padding-bottom: 2rem;
     background: transparent;  /* or a subtle background if desired */
   }
   .business-focus .business-header h2 {
-    font-family: "Albert Sans", serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     color: #00539c;
     margin: 0;
@@ -552,7 +552,7 @@ dash-body {
     font-size: 1rem;
   }
   .business-focus .container {
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
   }
   .business-cards {
@@ -564,7 +564,7 @@ dash-body {
   .business-card {
     flex: 1 1 calc(50% - 2rem);
     background: #f7f7f7;
-    border-radius: 8px;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
@@ -579,8 +579,8 @@ dash-body {
     overflow: hidden;
   }
   .business-image a img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;  /* Ensures the entire image is visible */
     transition: transform .3s ease;
   }
@@ -607,7 +607,7 @@ dash-body {
     color: #00539c;
   }
   .business-content h3 {
-    font-family: "Albert Sans", serif;
+    font-family: 'Open Sans', sans-serif;
     display: inline-block;
     font-size: 2rem;
     color: #00539c;
