@@ -231,7 +231,7 @@ main.projects {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
-    max-width: 83%; /* Constrain width for better readability */
+    max-width: 70%; /* Constrain width for better readability */
     margin: auto;
     overflow-y:scroll;
     scrollbar-width: none;
