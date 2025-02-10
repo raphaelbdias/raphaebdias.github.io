@@ -231,7 +231,7 @@ main.projects {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
-    max-width: 1200px; /* Constrain width for better readability */
+    max-width: 83%; /* Constrain width for better readability */
     margin: auto;
     overflow-y:scroll;
     scrollbar-width: none;
@@ -547,7 +547,7 @@ dash-body {
     font-size: 1rem;
   }
   .business-focus .container {
-    max-width: 80%;
+    max-width: 83%;
     margin: 0 auto;
   }
 
