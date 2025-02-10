@@ -47,7 +47,7 @@ body {
 
 .next-button:hover {
     color: #555;
-    font-size: 1rem; /* Slightly reduce size on hover for effect */
+    font-size: 1.5vh; /* Slightly reduce size on hover for effect */
 }
 /* Style the main content */
 main {
@@ -85,7 +85,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #555; /* Change color to grey on hover */
     text-decoration: none;
-    font-size: 1rem; /* Reduce font size on hover */
+    font-size: 2vh; /* Reduce font size on hover */
 }
 /* Style the main content */
 main.about {
