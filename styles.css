@@ -511,6 +511,17 @@ dash-body {
    10. BUSINESS FOCUS SECTION
    =================================================================== */
 
+   main.business-focus {
+    padding-top: 10vh; /* Space for the back button */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    max-width: 1200px; /* Constrain width for better readability */
+    margin: auto;
+    overflow-y:scroll;
+    scrollbar-width: none;
+    box-sizing: border-box; /* Include padding and border in width */
+}
 .business-focus {
     padding: .7rem 0;
     background: #fff;  /* Change if needed */
