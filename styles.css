@@ -439,10 +439,9 @@ dash-body {
 
 /* Hobbies Slider Section */
 .hobbies-slider-section {
-    padding: 2rem 0;
+    padding: 5%;
     background: #fff; /* Or choose a background that fits your design */
     text-align: left;
-    margin: 5%;
   }
   
   .hobbies-slider-section h2 {
