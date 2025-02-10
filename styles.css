@@ -525,7 +525,15 @@ dash-body {
 .business-focus {
     padding: .7rem 0;
     background: #fff;  /* Change if needed */
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%; /* Ensure project div takes full width */
+    box-sizing: border-box; /* Include padding and border in width */
   }
+  
   .business-focus .business-header {
     text-align: center;
     padding-bottom: 2rem;
