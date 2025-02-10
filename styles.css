@@ -606,18 +606,19 @@ dash-body {
   }
   .business-content h3 {
     color: #333;
-    font-size: 1.8vh;
+    font-size: 1.8rem;
     font-weight: 400;
   }
   .business-content h3 a {
     color: inherit;
-    font-size: 1.5vh;
-    transition: font-size .3s ease;
+    font-size: 1.5rem;
+    transition: font-size 0.3s ease;
     text-decoration: none;
   }
   .business-content h3 a:hover {
-    font-size: 1.4rem; /* Reduce the size on hover */
+    font-size: 1.4rem; /* Slightly reduce the size on hover */
   }
+  
   .business-content p {
     font-size: 1rem;
     color: #333;
