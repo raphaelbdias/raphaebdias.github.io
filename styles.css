@@ -516,7 +516,7 @@ dash-body {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
-    max-width: 1200px; /* Constrain width for better readability */
+    max-width: 90%; /* Constrain width for better readability */
     margin: auto;
     overflow-y:scroll;
     scrollbar-width: none;
@@ -561,6 +561,7 @@ dash-body {
   }
   .business-cards {
     display: flex;
+    padding-top: 10vh; /* Space for the back button */
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: space-around;
