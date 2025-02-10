@@ -540,11 +540,9 @@ dash-body {
     background: transparent;  /* or a subtle background if desired */
   }
   .business-focus .business-header h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
-    color: #00539c;
-    margin: 0;
-    letter-spacing: 0.05em;
+    color: #333;
+    font-size: 2vh;
+    font-weight: 600;
   }
   .business-focus .business-header p {
     max-width: 80%;
@@ -607,11 +605,9 @@ dash-body {
     color: #00539c;
   }
   .business-content h3 {
-    font-family: 'Open Sans', sans-serif;
-    display: inline-block;
-    font-size: 2rem;
-    color: #00539c;
-    margin: 0;
+    color: #333;
+    font-size: 1.4vh;
+    font-weight: 400;
   }
   .business-content h3 a {
     color: inherit;
