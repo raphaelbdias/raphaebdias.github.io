@@ -611,11 +611,12 @@ dash-body {
   }
   .business-content h3 a {
     color: inherit;
+    font-size: 1.5vh;
     transition: font-size .3s ease;
     text-decoration: none;
   }
   .business-content h3 a:hover {
-    font-size: 1.7rem; /* Reduce the size on hover */
+    font-size: 1.4rem; /* Reduce the size on hover */
   }
   .business-content p {
     font-size: 1rem;
