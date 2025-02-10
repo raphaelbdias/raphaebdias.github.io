@@ -567,7 +567,7 @@ dash-body {
   }
   .business-card {
     flex: 1 1 calc(50% - 2rem);
-    background: #f7f7f7;
+    background: #fff;
     /* border-radius: 1rem; */
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
