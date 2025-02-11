@@ -82,9 +82,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #555; /* Change color to grey on hover */
+    color: #7e7e7e; /* Change color to grey on hover */
     text-decoration: none;
-    font-size: 1.3rem; /* Reduce font size on hover */
+    /* font-size: 1.3rem; */
 }
 /* Style the main content */
 main.about {
