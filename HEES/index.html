@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEES Reference Current Simulator</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        canvas {
+            max-width: 100%;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .slider-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>HEES Reference Current Simulation</h2>
+        <canvas id="heesChart"></canvas>
+        <div class="controls">
+            <div class="slider-container">
+                <label for="amplitude">Amplitude:</label>
+                <input type="range" id="amplitude" min="1" max="10" step="0.1" value="5" oninput="updateChart()">
+                <span id="ampValue">5</span>
+            </div>
+            <div class="slider-container">
+                <label for="frequency">Frequency:</label>
+                <input type="range" id="frequency" min="1" max="10" step="0.1" value="3" oninput="updateChart()">
+                <span id="freqValue">3</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ctx = document.getElementById('heesChart').getContext('2d');
+        let chartData = generateData(5, 3);
+
+        let chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Array.from({length: 100}, (_, i) => i),
+                datasets: [{
+                    label: 'HEES Reference Current',
+                    data: chartData,
+                    borderColor: 'blue',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { title: { display: true, text: 'Time (t)' } },
+                    y: { title: { display: true, text: 'Current' } }
+                }
+            }
+        });
+
+        function generateData(amplitude, frequency) {
+            return Array.from({length: 100}, (_, i) => amplitude * Math.sin(i * frequency * 0.1) + Math.random() * 2 - 1);
+        }
+
+        function updateChart() {
+            let amplitude = parseFloat(document.getElementById('amplitude').value);
+            let frequency = parseFloat(document.getElementById('frequency').value);
+
+            document.getElementById('ampValue').textContent = amplitude;
+            document.getElementById('freqValue').textContent = frequency;
+
+            chart.data.datasets[0].data = generateData(amplitude, frequency);
+            chart.update();
+        }
+    </script>
+</body>
+</html>
