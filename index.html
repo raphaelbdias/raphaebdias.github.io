@@ -1,89 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>raphaelbdias</title>
-    <link rel="shortcut icon" href="https://raphaelbdias.com/images main/logos/iconlogo.png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://raphaelbdias.com/styles.css">
-    <style>
-        #typed-message {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 3px solid black;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            font-size: 40px;
-            margin-top: 50px; /* Adjust spacing from top */
-            margin-bottom: 50px;
-        }
-
-        nav {
-            display: none; /* Initially hide navigation */
-            opacity: 0; /* Initially hidden */
-            transition: opacity 2s ease-in-out; /* Fade-in transition effect */
-        }
-
-        .show-nav {
-            display: block; /* Show navigation when scrolled */
-            opacity: 1; /* Fade in navigation */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raphael B Dias - Portfolio</title>
+  <link rel="shortcut icon" href="https://raphaelbdias.com/images main/logos/iconlogo.png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="services.css">
 </head>
 <body>
-
-    <main>
-        <div id="typed-message"></div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="https://raphaelbdias.com/about.html">&gt; About me</a></li>
-                <li><a href="https://raphaelbdias.com/projects.html">&gt; Projects</a></li>
-                <li><a href="https://raphaelbdias.com/services.html">&gt; Services</a></li>
-                <li><a href="https://raphaelbdias.com/contact.html">&gt; Contact</a></li>
-            </ul>
+    <header class="hero">
+        <!-- Hero text content -->
+        <div class="hero-content">
+          <h1 class="hero-title">Raphael B. Dias</h1>
+          <p class="hero-subtitle">Data Analytics &amp; Strategic Consulting</p>
+        </div>
+        
+        <!-- Navigation (placed below hero-content but still in <header>) -->
+        <nav class="hero-nav">
+          <ul>
+            <li><a href="https://raphaelbdias.com/projects.html">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="https://raphaelbdias.com/contact.html">Contact</a></li>
+          </ul>
         </nav>
+      </header>
+  
+    <!-- About Section -->
+    <main class="about-section">
+      <div class="about-photo">
+        <img src="https://raphaelbdias.com/images main/other/photo.jpeg" alt="Raphael B. Dias">
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          I am a Decision Support Analyst at Health Sciences North (Horizon Santé-Nord) in Greater Sudbury, Ontario (Remote). I analyze, interpret, and present data to support strategic, evidence-based decision-making. My role involves managing quality assurance processes, extracting and combining complex datasets, and designing adaptive reports to meet evolving organizational needs.
+        </p>
+        <p>
+          I collaborate with IT teams to automate manual processes, develop performance indicators aligned with our strategic goals, and provide expert guidance on Health System Funding Reforms.
+        </p>
+      </div>
     </main>
 
-    <script>
-        // JavaScript to type out the message and reveal navigation
-        const message = "Hello! I am Raphael, a data analyst.";
-        let i = 0;
-        const speed = 50; // Typing speed in milliseconds
-        const revealDelay = 1500; // Delay in milliseconds before revealing navigation
 
-        function typeWriter() {
-            if (i < message.length) {
-                document.getElementById("typed-message").innerHTML += message.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            } else {
-                // Once typing is complete, reveal navigation after a delay
-                setTimeout(revealNavigation, revealDelay);
-                // Store in localStorage that the typing effect has been shown
-                localStorage.setItem('typingEffectShown', 'true');
-            }
+<!-- Career Path Section -->
+<section class="career-section">
+    <!-- Background Title -->
+    <div class="career-background">
+      <h2>Career Milestones</h2>
+    </div>
+
+    
+    <div class="timeline">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Health Science North | Horizon Santé-Nord</h3> 
+          <p>Decision Support Analyst</p>
+          <i>2024 - Present</i>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+            <h3>Cambrian College of Applied Arts and Sciences</h3> 
+            <p>Research Assistant</p>
+            <i>2023 - 2024</i>
+          </div>
+        </div>
+    
+      <!-- Timeline Item 3 -->
+      <div class="timeline-item left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>NorthStarDoc | Medical Scheduling Hub</h3> 
+          <p>Data Analyst</p>
+          <i>2022 - 2022</i>
+        </div>
+      </div>
+      
+      <!-- Timeline Item 4 -->
+      <div class="timeline-item right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+            <h3>iDeas Unlimited | SixthFactor Consultancy</h3> 
+            <p>Market Research Analyst</p>
+            <i>2021 - 2022</i>
+          </div>
+        </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services">
+  <main class="business-focus">
+    <h1>Services</h1>
+
+    <div class="business-cards">
+
+      <!-- Service 1: Data Analytics & BI -->
+      <div class="business-card">
+        <div class="business-image">
+          <a href="#">
+            <img src="images main/other/data-analysis.png" alt="Data Analytics & BI" />
+          </a>
+        </div>
+        <div class="business-content">
+          <h3><a href="#">Data Analytics &amp; Business Intelligence</a></h3>
+          <p>
+            Transform raw datasets into powerful insights with interactive dashboards, real-time reporting, and advanced data mining. Leverage SQL, Python, and BI tools (Power BI, Tableau) to optimize decision-making and identify growth opportunities.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 2: Machine Learning & Predictive Modeling -->
+      <div class="business-card">
+        <div class="business-image">
+          <a href="#">
+            <img src="images main/other/market-research.jpg" alt="Machine Learning & Predictive Modeling" />
+          </a>
+        </div>
+        <div class="business-content">
+          <h3><a href="#">Machine Learning &amp; Predictive Modeling</a></h3>
+          <p>
+            Develop and deploy ML solutions for demand forecasting, risk assessment, and anomaly detection. I integrate frameworks like TensorFlow and Hugging Face to deliver tailored AI solutions for med-tech, weather analytics, logistics, and more.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 3: Custom Web & Software Development -->
+      <div class="business-card">
+        <div class="business-image">
+          <a href="#">
+            <img src="images main/other/software-dev.jpg" alt="Custom Web & Software Development" />
+          </a>
+        </div>
+        <div class="business-content">
+          <h3><a href="#">Custom Web &amp; Software Development</a></h3>
+          <p>
+            Build full-stack web apps using Python (Flask, Streamlit) and modern front-end frameworks. From data collection pipelines to user-facing dashboards, I create secure, scalable systems that integrate seamlessly with your existing workflows.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 4: Data Engineering & Database Solutions -->
+      <div class="business-card">
+        <div class="business-image">
+          <a href="#">
+            <img src="images main/other/data-modelling.jpg" alt="Data Engineering & Database Solutions" />
+          </a>
+        </div>
+        <div class="business-content">
+          <h3><a href="#">Data Engineering &amp; Database Solutions</a></h3>
+          <p>
+            Design and maintain robust, scalable databases (SQL Server, PostgreSQL, MySQL) to support large-scale data ingestion. Implement ETL/ELT pipelines and ensure data quality, consistency, and availability for analytics and reporting.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 5: Market Research & Strategic Consulting -->
+      <div class="business-card">
+        <div class="business-image">
+          <a href="#">
+            <img src="images main/other/market-research.jpg" alt="Market Research & Strategic Consulting" />
+          </a>
+        </div>
+        <div class="business-content">
+          <h3><a href="#">Market Research &amp; Consulting</a></h3>
+          <p>
+            Provide comprehensive market insights, social listening (NLP), and competitive analyses to guide strategic decisions. Expertise in consumer brands, med-tech, education, and more, delivering data-driven recommendations for sustainable growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 6: Project Management & Implementation -->
+      <div class="business-card">
+        <div class="business-image">
+          <a href="#">
+            <img src="images main/other/data-analysis.png" alt="Project Management & Implementation" />
+          </a>
+        </div>
+        <div class="business-content">
+          <h3><a href="#">Project Management &amp; Implementation</a></h3>
+          <p>
+            Oversee end-to-end project lifecycles with Agile methodologies, reducing delivery times and ensuring quality. Skilled in MS Project, Jira, and cross-functional collaboration to align technical goals with organizational strategy.
+          </p>
+        </div>
+      </div>
+
+    </div> <!-- /business-cards -->
+    </main>
+    </section>
+  
+  <!-- Hobbies Section -->
+  <section class="hobbies-section fade-in">
+    <h2>Hobbies &amp; Interests</h2>
+    <p>
+      When I'm not immersed in data, I enjoy playing chess to keep my mind sharp, strumming my guitar to explore my creative side, and venturing into nature to recharge.
+    </p>
+    <div class="hobbies-slider">
+      <div class="hobbies-track">
+        <div class="hobby-card"><img src="https://raphaelbdias.com/images main/other/camping.jpeg" alt="Camping"></div>
+        <div class="hobby-card"><img src="https://raphaelbdias.com/images main/other/chess.jpeg" alt="Chess"></div>
+        <div class="hobby-card"><img src="https://raphaelbdias.com/images main/other/guitar.jpeg" alt="Guitar"></div>
+        <div class="hobby-card"><img src="https://raphaelbdias.com/images main/other/camping2.jpeg" alt="Camping"></div>
+        <div class="hobby-card"><img src="https://raphaelbdias.com/images main/other/camping3.jpeg" alt="Camping"></div>
+        <div class="hobby-card"><img src="https://raphaelbdias.com/images main/other/chess2.jpeg" alt="Chess"></div>
+        <!-- Duplicate set for seamless scroll -->
+        <div class="hobby-card"><img src="https://raphaelbdias.com/images main/other/camping.jpeg" alt="Camping"></div>
+        <div class="hobby-card"><img src="https://raphaelbdias.com/images main/other/guitar.jpeg" alt="Guitar"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer fade-in">
+    <p>&copy; 2025 Raphael B. Dias</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const options = {
+      threshold: 0.1
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
+      });
+    }, options);
 
-        function revealNavigation() {
-            document.getElementById("navbar").style.display = "block";
-            document.getElementById("navbar").classList.add('show-nav'); // Apply fade-in effect
-        }
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+  <script>
+    let lastScrollTop = 0;
+    const navBar = document.querySelector('.hero-nav');
 
-        // Start typing when the page loads
-        window.onload = function() {
-            // Check if the typing effect has been shown before
-            if (!localStorage.getItem('typingEffectShown')) {
-                typeWriter();
-            } else {
-                // If it has been shown, display the full message and show navigation immediately
-                document.getElementById("typed-message").innerHTML = message;
-                revealNavigation();
-            }
+    window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // If scrolling down, hide nav; if scrolling up, show nav
+    if (scrollTop > lastScrollTop) {
+        navBar.classList.add('hidden');
+    } else {
+        navBar.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile or negative scrolling
+        });
+  </script>
+  <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const timelineItems = document.querySelectorAll(".timeline-item");
+        
+        const observerOptions = {
+            threshold: 0.2
         };
-    </script>
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+            });
+        }, observerOptions);
+
+        timelineItems.forEach(item => {
+            observer.observe(item);
+        });
+        });
+
+  </script>
 </body>
 </html>

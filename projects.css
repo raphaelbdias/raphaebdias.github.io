@@ -1,0 +1,122 @@
+    /* Global Styles */
+    body {
+        background-color: #141414;
+        color: #E0F2F1;
+        font-family: 'Albert Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+  
+      /* Header / Navigation (standardized to match your home page) */
+      header .hero-nav {
+        background: linear-gradient(135deg, #00796B, #00695C);
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+      header .hero-nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+      }
+      header .hero-nav li a {
+        color: #E0F2F1;
+        text-decoration: none;
+        font-family: "Atkinson Hyperlegible Mono", monospace;
+      }
+  
+      /* Projects Grid Container */
+      main.projects {
+        max-width: 1200px;
+        margin: 100px auto 2rem; /* top margin accounts for fixed header */
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-gap: 2rem;
+      }
+      main.projects h1 {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-family: "Atkinson Hyperlegible Mono", monospace;
+        margin-bottom: 2rem;
+      }
+  
+      /* Project Card */
+      .project {
+        position: relative;
+        background-color: #222;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      }
+      .project a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        height: 100%;
+      }
+  
+      /* Project Image (always visible) */
+      .project-image {
+        width: 100%;
+        display: block;
+      }
+  
+      /* Project Info: title and role (always visible) */
+      .project-info {
+        padding: 1rem;
+        background-color: #1a1a1a;
+      }
+      .project-title {
+        font-family: "Atkinson Hyperlegible Mono", monospace;
+        font-size: 1.2rem;
+        margin: 0;
+        color: #1DE9B6;
+      }
+      .project-role {
+        font-size: 0.9rem;
+        color: #009688;
+        margin-top: 0.5rem;
+      }
+  
+      /* Hover Overlay: description and date */
+      .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.85);
+        color: #E0F2F1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+      }
+      .project:hover .project-overlay {
+        opacity: 1;
+      }
+      .project-description {
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+        max-width: 80%;
+      }
+      .project-date {
+        font-size: 0.8rem;
+        color: #80CBC4;
+        margin-top: 0.5rem;
+      }

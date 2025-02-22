@@ -1,34 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="shortcut icon" href="https://raphaelbdias.com/images main/logos/iconlogo.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Raphael B. Dias</title>
+  <link rel="shortcut icon" href="https://raphaelbdias.com/images main/logos/iconlogo.png" />
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts (matching your homepage) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100..900&family=Atkinson+Hyperlegible+Mono:wght@200..800&family=Ysabeau+Office:wght@1..1000&display=swap"
+    rel="stylesheet"
+  />
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <a href="https://raphaelbdias.com/services.html" class="back-button">&ShortLeftArrow; services</a>
 
-    <div class="contact-links">
-        <a href="https://github.com/raphaelbdias" target="_blank">
-            <img src="https://raphaelbdias.com/images main/logos/github.svg" alt="GitHub Logo" class="contact-logo"> GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/disaraphael/" target="_blank">
-            <img src="https://raphaelbdias.com/images main/logos/linkedin-in.svg" alt="LinkedIn Logo" class="contact-logo"> LinkedIn
-        </a>
-        <a href="images main/other/Raphael Dias Resume January 2025.docx" target="_blank">
-            <img src="https://raphaelbdias.com/images main/logos/file-regular.svg" alt="Resume Logo" class="contact-logo"> Resume
-        </a>
-        <a href="mailto:diasraphael31@gmail.com">
-            <img src="https://raphaelbdias.com/images main/logos/envelope-regular.svg" alt="Email Logo" class="contact-logo"> Email
-        </a>
-    </div>
+    <header>
+        <nav class="hero-nav">
+          <ul>
+            <li><a href="https://raphaelbdias.com/index.html">Home</a></li>
+            <li><a href="https://raphaelbdias.com/projects.html">Projects</a></li>
+            <li><a href="https://raphaelbdias.com/index.html#services">Services</a></li>
+            <li><a href="https://raphaelbdias.com/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+  <main class="contact-page">
+    <h1>Contact Me</h1>
+    <p>
+      Interested in working together or have any questions? 
+      Fill out the form below or send me an email at <strong>email@example.com</strong>.
+    </p>
 
-    <script src="https://raphaelbdias.com/scripts.js"></script>
+    <!-- Using Formspree (Replace with your Formspree endpoint) -->
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/xnnjrzqj"
+      method="POST"
+    >
+      <div>
+        <label for="name">Name <span style="color:#FF6E40;">*</span></label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+      </div>
+      <div>
+        <label for="email">Email <span style="color:#FF6E40;">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+      </div>
+      <div>
+        <label for="message">Message <span style="color:#FF6E40;">*</span></label>
+        <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+      </div>
+      <!-- Optionally, add a hidden input for spam filtering or reference -->
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
 </body>
 </html>

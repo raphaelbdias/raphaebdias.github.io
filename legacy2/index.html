@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raphaelbdias</title>
+    <link rel="shortcut icon" href="https://raphaelbdias.com/images main/logos/iconlogo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://raphaelbdias.com/styles.css">
+    <style>
+        #typed-message {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid black;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+            margin-top: 50px; /* Adjust spacing from top */
+            margin-bottom: 50px;
+        }
+
+        nav {
+            display: none; /* Initially hide navigation */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 2s ease-in-out; /* Fade-in transition effect */
+        }
+
+        .show-nav {
+            display: block; /* Show navigation when scrolled */
+            opacity: 1; /* Fade in navigation */
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div id="typed-message"></div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="https://raphaelbdias.com/about.html">&gt; About me</a></li>
+                <li><a href="https://raphaelbdias.com/projects.html">&gt; Projects</a></li>
+                <li><a href="https://raphaelbdias.com/services.html">&gt; Services</a></li>
+                <li><a href="https://raphaelbdias.com/contact.html">&gt; Contact</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <script>
+        // JavaScript to type out the message and reveal navigation
+        const message = "Hello! I am Raphael, a data analyst.";
+        let i = 0;
+        const speed = 50; // Typing speed in milliseconds
+        const revealDelay = 1500; // Delay in milliseconds before revealing navigation
+
+        function typeWriter() {
+            if (i < message.length) {
+                document.getElementById("typed-message").innerHTML += message.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                // Once typing is complete, reveal navigation after a delay
+                setTimeout(revealNavigation, revealDelay);
+                // Store in localStorage that the typing effect has been shown
+                localStorage.setItem('typingEffectShown', 'true');
+            }
+        }
+
+        function revealNavigation() {
+            document.getElementById("navbar").style.display = "block";
+            document.getElementById("navbar").classList.add('show-nav'); // Apply fade-in effect
+        }
+
+        // Start typing when the page loads
+        window.onload = function() {
+            // Check if the typing effect has been shown before
+            if (!localStorage.getItem('typingEffectShown')) {
+                typeWriter();
+            } else {
+                // If it has been shown, display the full message and show navigation immediately
+                document.getElementById("typed-message").innerHTML = message;
+                revealNavigation();
+            }
+        };
+    </script>
+</body>
+</html>

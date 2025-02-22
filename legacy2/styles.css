@@ -1,0 +1,630 @@
+/* Apply the Open Sans font */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('images main/other/background7.jpg') no-repeat center center fixed;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
+}
+
+/* Style the back button */
+.back-button {
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 1.5rem; /* Make the button larger */
+    font-weight: 300; /* Use a thin font weight */
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.back-button:hover {
+    color: #555;
+    font-size: 1.3rem; /* Slightly reduce size on hover for effect */
+}
+
+
+/* Style the next button */
+.next-button {
+    position: fixed;
+    top: 2vh;
+    right: 2vh;
+    font-size: 1.5rem; /* Make the button larger */
+    font-weight: 300; /* Use a thin font weight */
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, font-size 0.3s;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.next-button:hover {
+    color: #555;
+    font-size: 1.3rem; /* Slightly reduce size on hover for effect */
+}
+/* Style the main content */
+main {
+    text-align: center;
+    max-width: 80%;
+    scrollbar-width: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    transform: translateY(2vh); /* Push the list down initially */
+    transition: transform 5s ease-in-out; /* Smooth transition for transform */
+}
+
+nav ul li {
+    margin: 1vh 0;
+    text-align: justify;
+    transition: transform 5s ease-in-out; /* Smooth transition for transform */
+
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400; /* Non-bold font weight */
+    transition: color 0.3s, font-size 0.3s; /* Added font-size transition */
+}
+
+nav ul li a:hover {
+    color: #7e7e7e; /* Change color to grey on hover */
+    text-decoration: none;
+    /* font-size: 1.3rem; */
+}
+/* Style the main content */
+main.about {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    padding-top: 20vh; /* Space for the back button */
+    scrollbar-width: none;
+}
+
+/* Style the about photo */
+.about-photo {
+    flex: 0 0 33.33%; /* Take 1/3 of the available space and don't grow or shrink */
+    max-width: 33.33%; /* Ensure it doesn't exceed 1/3 of the viewport */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.about-photo img {
+    max-width: 60%; /* Ensure the photo doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style the about content */
+.about-content {
+    flex: 1; /* Allow the content to take up the remaining space */
+    padding-left: 2vh; /* Add some spacing between the photo and content */
+    height: 80vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    max-width: 100%;
+}
+
+.about-content h2 {
+    color: #333;
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+.about-content p {
+    color: #555;
+    font-size: 1vh;
+    line-height: 1.5; /* Improved readability */
+}
+/* Style the about summary */
+.about-summary {
+    text-align: justify;
+    flex: 1; /* Allow the summary to grow to fill available space */
+    overflow-y: auto; /* Add vertical scroll if content exceeds height */
+    margin-right: 30vh;
+}
+
+.about-summary h1 {
+    color: #333;
+    font-size: 4vh;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+}
+.about-summary h2 {
+    color: #333;
+    font-size: 2vh;
+    margin-top: 0; /* Remove default margin */
+    font-weight: lighter;
+}
+
+.about-summary p {
+    color: #555;
+    font-size: 2vh;
+    line-height: 1.5; /* Improved readability */
+    font-weight: 200;
+}
+
+
+/* Style the skills section */
+.skills {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between skill items */
+    margin-top: 2vh;
+}
+
+.skill {
+    flex: 1;
+}
+
+
+.skill-button {
+    width: 100%;
+    padding: 1vh;
+    text-align: left;
+    color: #333;
+    font-size: 2vh;
+    margin-top: 0; /* Remove default margin */
+    font-weight: light;
+    background-color: #f4f4f4;
+    border: 1vh solid #ddd;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s;
+}
+/* Skill bar styles */
+.skill-bar {
+    height: 2vh;
+    margin-bottom: 1vh;
+}
+
+.python {
+    width: 90%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.sql {
+    width: 60%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.bi {
+    width: 75%;
+    text-align: right;
+    background-color: lightblue;
+    font-weight: lighter;
+}
+
+.skill-button:hover {
+    background-color: #8f8e8e;
+}
+
+.skill-content {
+    display: none;
+    background-color: #f4f4f4;
+    border: 1vh solid #ddd;
+    padding: 2.5px;
+}
+
+.skill-content p {
+    font-size: 15px;
+}
+
+/* Style the projects section */
+main.projects {
+    padding-top: 10vh; /* Space for the back button */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    max-width: 65%; /* Constrain width for better readability */
+    margin: auto;
+    overflow-y:scroll;
+    scrollbar-width: none;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+.projects h1 {
+    color: #333;
+    font-size: 35px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+    text-align: justify;
+}
+
+.projects h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%; /* Ensure project div takes full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.project-body {
+    display: flex;
+    flex-direction: row; /* Align image and description side by side */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.project img {
+    width: 40%; /* Ensure the image fills its container while maintaining aspect ratio */
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 20px;
+}
+
+.project-description {
+    font-size: 18px;
+    font-weight: 300;
+    color: #555;
+    flex: 1; /* Allow description to take up remaining space */
+    margin-top: 0; /* Remove default margin for better alignment */
+    line-height: 30px;
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+    transition: color 0.3s;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.project-role {
+    font-size: 18px;
+    font-weight: 250;
+    color: #333;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    text-align: justify;
+    text-decoration: none;
+}
+
+.project-title:hover {
+    color: #9b9999;
+    font-size: 23px;
+    text-decoration: underline;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.project-date, .project-name {
+    font-size: 18px;
+    color: #777;
+    margin: 5px 0;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #a7a5a5c8;
+}
+
+.contact-logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-right: 20px;
+}
+
+/* Ensure wrapper takes full width and applies some padding */
+#wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Style the paragraph */
+p {
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #333;
+}
+
+dash-body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #000;
+    height: 100%;
+
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    background-color: #6200EE; /* Primary color */
+    color: #FFFFFF;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Intro Section */
+.intro {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Dashboard Section */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Chart Container */
+.chart-container {
+    flex: 1 1 calc(50% - 40px); /* Two columns with gap adjustment */
+    background: #ffffff;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.chart-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #6200EE; /* Primary color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chart-container {
+        flex: 1 1 100%; /* Single column on smaller screens */
+    }
+}
+
+
+/* Hobbies Slider Section */
+.hobbies-slider-section {
+    padding: 5%;
+    background: #fff; /* Or choose a background that fits your design */
+    text-align: left;
+  }
+  
+  .hobbies-slider-section h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    color: #333;
+  }
+
+  .hobbies-slider-section p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .hobbies-slider {
+    overflow: hidden;
+    position: relative;
+    padding: 0 15px;
+  }
+  
+  .hobbies-track {
+    display: flex;
+    align-items: center;
+    /* Adjust the animation duration as needed */
+    animation: scroll 60s linear infinite;
+  }
+  
+  .hobby-card {
+    flex: 0 0 auto;
+    margin: 0 20px;
+    text-align: center;
+  }
+  
+  .hobby-card img {
+    max-height: 320px; /* Increased size for clarity */
+    width: auto;
+    object-fit: cover;
+    /* border-radius: 1px; */
+    transition: transform 0.3s ease;
+  }
+  
+  .hobby-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .hobby-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Keyframes for continuous scrolling */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* Adjust the translateX value based on the width of your content.
+         Here, -50% works if the set is repeated once. */
+      transform: translateX(-50%);
+    }
+  }
+  
+
+  /* ===================================================================
+   10. BUSINESS FOCUS SECTION
+   =================================================================== */
+
+   main.business-focus {
+    padding-top: 10vh; /* Space for the back button */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    max-width: 75%; /* Constrain width for better readability */
+    margin: auto;
+    overflow-y:scroll;
+    scrollbar-width: none;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+.business-focus {
+    padding: .7rem 0;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%; /* Ensure project div takes full width */
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+
+  .business-focus .business-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    background: transparent;  /* or a subtle background if desired */
+  }
+  .business-focus .business-header h2 {
+    color: #333;
+    font-size: 2vh;
+    font-weight: 600;
+  }
+  .business-focus .business-header p {
+    max-width: 80%;
+    margin: 2rem auto;
+    font-size: 1rem;
+  }
+  .business-focus .container {
+    max-width: 83%;
+    margin: 0 auto;
+  }
+
+  .container h1 {
+    color: #333;
+    font-size: 35px;
+    margin-top: 0; /* Remove default margin */
+    font-weight: normal;
+    text-align: justify;
+}
+  .business-cards {
+    display: flex;
+    /* padding-top: 10vh;  */
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .business-card {
+    flex: 1 1 calc(50% - 2rem);
+    background: #fff;
+    /* border-radius: 1rem; */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .business-image {
+    position: relative;
+    width: 100%;
+    padding-top: 65%;
+    overflow: hidden;
+  }
+  .business-image a {
+    display: block;
+    overflow: hidden;
+  }
+  .business-image a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the entire image is visible */
+    transition: transform .3s ease;
+  }
+  .business-image a:hover img {
+    transform: scale(0.95);
+  }
+  .business-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .business-content {
+    padding: 2rem;
+    text-align: center;
+  }
+  .business-icon {
+    margin-bottom: 1.2rem;
+  }
+  .business-icon i {
+    font-size: 2.5rem;
+    color: #00539c;
+  }
+  .business-content h3 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .business-content h3 a {
+    color: inherit;
+    font-size: 1.5rem;
+    transition: font-size 0.3s ease;
+    text-decoration: none;
+  }
+  .business-content h3 a:hover {
+    font-size: 1.4rem; /* Slightly reduce the size on hover */
+  }
+  
+  .business-content p {
+    font-size: 1rem;
+    color: #333;
+  }
