@@ -28,46 +28,75 @@
     gap: 2rem;
   }
 
-  /* Individual Card */
-  .business-card {
-    background-color: #222;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-  }
-  .business-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  }
+/* Business Card Container */
+.business-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #222;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
 
-  /* Card Image */
-  .business-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+/* Hover effect for the entire card */
+.business-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
 
-  /* Card Content */
-  .business-content {
-    padding: 1rem;
-  }
-  .business-content h3 {
-    margin: 0 0 0.5rem 0;
-    font-family: "Atkinson Hyperlegible Mono", monospace;
-    color: #1DE9B6;
-  }
-  .business-content a {
-    text-decoration: none;
-    color: #1DE9B6;
-  }
-  .business-content p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0;
-    color: #E0F2F1;
-  }
+/* Card Image */
+.business-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Title Overlay (visible by default) */
+.business-content h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 0.3rem 0.6rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  font-family: "Atkinson Hyperlegible Mono", monospace;
+  color: #1DE9B6;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+/* Description Overlay (hidden by default) */
+.business-content p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  margin: 0;
+}
+
+/* Hover: Reveal Description & Hide Title */
+.business-card:hover .business-content p {
+  opacity: 1;
+}
+
+.business-card:hover .business-content h3 {
+  opacity: 0;
+}
+
+
 
   /* Responsive Adjustments */
   @media (max-width: 768px) {
