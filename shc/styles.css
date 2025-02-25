@@ -1,0 +1,908 @@
+/* Existing variables and global styles remain unchanged */
+:root {
+    --primary-font: "Albert Sans", sans-serif;
+    --black: #000000;
+    --white: #ffffff;
+    --off-white: #f7f7f7;
+    --accent-color-1: #5680e9; /* Blue */
+    --accent-color-2: #f79e02; /* Green */
+    --accent-color-3: #ff6200; /* Red */
+    --h1: bold 74px/84px var(--primary-font);  /* Increased size */
+    --h2: bold 36px/44px var(--primary-font);
+    --h3: bold 24px/32px var(--primary-font);
+    --h4: bold 18px/24px var(--primary-font);
+    --p: 16px/24px var(--primary-font);
+    --transition: 0.3s ease-in-out;
+  }
+  
+  /* Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: var(--primary-font);
+    background-color: var(--white);
+    color: var(--black);
+  }
+  
+  section {
+    scroll-snap-align: start;
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--accent-color-1); /* Use your accent color */
+    padding: 0.5rem 1rem;
+  }
+  
+  .social-links a {
+    color: var(--white);
+    margin-right: 1rem;
+    font-size: 1rem;
+    transition: color var(--transition);
+  }
+  
+  
+  .social-links a:hover {
+    color: var(--accent-color-2);
+  }
+  
+  /* Main Navigation */
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 1rem;
+  }
+  
+  .logo img {
+    height: 4rem; /* Adjust as needed */
+  }
+  
+  /* Navigation Menu */
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+  }
+  
+  .nav-menu ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-menu ul li a:hover {
+    color: var(--accent-color-2);
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--black);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .search-bar button:hover {
+    color: var(--accent-color-1);
+  }
+  
+  /* Hamburger Button (for mobile) */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .hamburger .hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--black);
+    margin: 4px 0;
+  }
+  
+  
+  
+  /* Hero Section */
+  .hero {
+    background: radial-gradient(circle at 20% center, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 80%),
+                url("hero2.jpg") center center / cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    color: var(--white);
+    position: relative;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font: var(--h1);
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font: var(--p);
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: var(--accent-color-2);
+    font-family: var(--primary-font);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition);
+  }
+  
+  .cta-button:hover {
+    background-color: var(--accent-color-3);
+  }
+  
+  /* About Us Section: Title and Description Styling */
+  .about-us .about-us-content {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .about-us .about-us-content h2 {
+    font: var(--h2);
+    color: var(--accent-color-1);
+    margin-bottom: 20px;
+  }
+  
+  .about-us .about-us-content p {
+    font: var(--p);
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  /* Container for About Us Cards */
+  .about-us-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 90%;
+    margin: 40px auto;
+  }
+  
+  /* Individual Card */
+  .card {
+    position: relative;
+    overflow: hidden;
+    height: 500px;  /* Adjust height as needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform var(--transition);
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Background Image */
+  .card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.8);
+    transition: opacity var(--transition);
+  }
+  
+  /* Card Overlay: Always show heading; list hidden by default */
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color var(--transition);
+  }
+  
+  /* Always visible heading */
+  .card-overlay h3 {
+    font: var(--h3);
+    margin-bottom: 10px;
+  }
+  
+  /* The list container is hidden by default */
+  .overlay-list {
+    opacity: 0;
+    transition: opacity var(--transition);
+  }
+  
+  /* On hover, reveal the list */
+  .card:hover .overlay-list {
+    opacity: 1;
+  }
+  
+  /* Optionally, you can also change the background on hover */
+  .card:hover .card-overlay {
+    background: rgba(0,0,0,0.9);
+  }
+  
+  /* List styling remains the same */
+  .overlay-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font: var(--p);
+  }
+  
+  .overlay-list ul li {
+    margin-bottom: 5px;
+  }
+  
+  
+  /* How We Help Section (Approach) */
+  .approach {
+    padding: 50px;
+    background-color: var(--off-white);
+    color: var(--black);
+    text-align: center;
+  }
+  
+  .approach-header {
+    margin-bottom: 40px;
+  }
+  
+  .approach-header h2 {
+    font: var(--h2);
+    margin-bottom: 10px;
+  }
+  
+  .approach-header p {
+    font: var(--p);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .approach-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+  }
+  
+  .approach-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform var(--transition);
+  }
+  
+  .approach-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card-icon {
+    margin-bottom: 10px;
+  }
+  
+  .card-icon img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+  
+  }
+  
+  .approach-card h3 {
+    font: var(--h3);
+    margin-bottom: 10px;
+    color: var(--accent-color-1)
+  }
+  
+  .approach-card p {
+    font: var(--p);
+  }
+  
+  /* Timeline Section Container (Entire Section) */
+  .timeline-section {
+    display: flex;
+    /* align-items: flex-start; */
+    gap: 20px;
+    padding: 50px;
+    background-color: var(--white);
+    justify-content: center;  /* centers vertically */
+  }
+  
+  /* Left Column: Timeline */
+  .left-timeline {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  .left-timeline h3 {
+  font-size: var(--h3);
+  }
+  /* Right Column: Header + Description */
+  .right-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centers vertically */
+    text-align: left;
+  
+  }
+  
+  /* Center the SVG inside left-timeline */
+  #timeline {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px; /* Default max width */
+    width: 100%;
+  }
+  
+  
+  /* Timeline Step Elements */
+  .step circle {
+    fill: var(--accent-color-1);
+    transition: r var(--transition);
+  }
+  
+  .step text {
+    font-family: var(--primary-font);
+  }
+  
+  /* Step Title */
+  .step-title {
+    fill: var(--accent-color-1);
+    font-size: 20px; /* Adjust as needed */
+    font-weight: bold;
+  }
+  
+  /* Step Description */
+  .step-description {
+    fill: #333;
+    font-size: 16px; /* Adjust as needed */
+  }
+  
+  /* Connector Paths */
+  .connector {
+    fill: none;
+    stroke: var(--accent-color-1);
+    stroke-width: 2;
+    transition: stroke-width var(--transition);
+  }
+  
+  
+  
+  .right-content {
+    flex: 1; /* the header + description area */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right-content h2 {
+    font: var(--h2);
+    color: var(--accent-color-1);
+    margin-bottom: 20px;
+  }
+  
+  .right-content p {
+    font: var(--p);
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Tooltip Styling */
+  .tooltip {
+    position: absolute;
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    pointer-events: none;
+    font-family: var(--primary-font);
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  
+  
+  
+  /* Assignments & Roles Section */
+  .assignments {
+    padding: 50px;
+    background-color: var(--off-white);
+    color: var(--black);
+  }
+  
+  .assignments-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .assignments-header h2 {
+    font: var(--h2);
+    margin-bottom: 10px;
+  }
+  
+  .assignments-header p {
+    font: var(--p);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .assignments-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  
+  .assignments-item {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assignments-item h3 {
+    font: var(--h3);
+    margin-bottom: 10px;
+  }
+  
+  .assignments-item ul {
+    list-style: disc inside;
+    padding-left: 20px;
+  }
+  
+  .assignments-item li {
+    font: var(--p);
+    margin-bottom: 5px;
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    padding: 50px;
+    background-color: var(--white);
+    color: var(--black);
+  }
+  
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .testimonials-header h2 {
+    font: var(--h2);
+    margin-bottom: 10px;
+  }
+  
+  .testimonials-header p {
+    font: var(--p);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  
+  .testimonial-item {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .testimonial-item p {
+    font: var(--p);
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-item h4 {
+    font: var(--h4);
+    margin-bottom: 5px;
+  }
+  
+  .testimonial-item span {
+    font: var(--p);
+    color: var(--accent-color-1);
+  }
+  
+    
+  /* Footer Section */
+  footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-links li a {
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition);
+  }
+  
+  .social-links li a:hover {
+    color: var(--accent-color-1);
+  }
+  
+  
+  /* Contact Us Section */
+  .contact-us {
+    padding: 50px 20px;
+    background-color: var(--off-white);
+    color: var(--black);
+    text-align: center;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contact-info, 
+  .contact-form {
+    flex: 1 1 400px; /* Grow and shrink, with a minimum width */
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* Contact Info */
+  .contact-info h2 {
+    font: var(--h2);
+    color: var(--accent-color-1);
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    font: var(--p);
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 10px;
+    font: var(--p);
+    color: #333;
+  }
+  
+  /* Contact Form */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font: var(--h4);
+    margin-bottom: 5px;
+    color: var(--accent-color-1);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font: var(--p);
+    resize: vertical;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color-1);
+  }
+  
+  /* Submit Button */
+  .cta-button {
+    background-color: var(--accent-color-2);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition);
+    align-self: flex-start;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--accent-color-3);
+  }
+  
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-info, .contact-form {
+      text-align: center;
+    }
+    .cta-button {
+      align-self: center;
+    }
+  }
+  
+  /* Enhanced Responsive Media Queries */
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 0 1.5rem;
+      min-height: 70vh;
+    }
+    .hero-content {
+      max-width: 80%;
+    }
+    .about-cards {
+      gap: 15px;
+      margin: 20px auto;
+    }
+    .approach-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .assignments-content,
+    .testimonials-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .process-step {
+      width: 100%;
+      text-align: center;
+    }
+    .process-step.left,
+    .process-step.right {
+      float: none;
+    }
+    .step-content {
+      max-width: 100%;
+    }
+    .process-connector {
+      height: 150px;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 0 1rem;
+      min-height: 60vh;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    .navbar nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .about-cards,
+    .approach-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font: bold 48px/58px var(--primary-font);
+    }
+    .hero-content p {
+      font: 14px/20px var(--primary-font);
+    }
+    .cta-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+    .navbar nav ul li a {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Show the hamburger button with explicit dimensions */
+    .hamburger {
+      display: flex;  /* Use flex to stack the lines vertically */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40px;     /* Set a width */
+      height: 40px;    /* Set a height */
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    
+    /* Style the individual lines */
+    .hamburger-line {
+      display: block;  /* Make sure each line is block-level */
+      width: 25px;
+      height: 3px;
+      background-color: var(--black);
+      margin: 4px 0;
+    }
+    
+    /* Hide the standard nav menu */
+    .main-nav nav {
+      display: none;
+    }
+    
+    /* When toggled, show the menu */
+    .nav-menu {
+      display: none;
+    }
+    .nav-menu.open {
+      display: block;
+      background-color: var(--white);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .nav-menu.open ul {
+      flex-direction: column;
+      padding: 1rem 0;
+      margin: 0;
+    }
+    
+    .nav-menu.open ul li {
+      margin: 1rem 0;
+    }
+  }
+  
+  
+  /* Responsive Handling for the Entire Section */
+  @media (max-width: 1024px) {
+    .timeline-section {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+    .left-timeline,
+    .right-content {
+      width: 100%;
+      border-right: none;
+    }
+    .right-content {
+      text-align: center;
+      margin-top: 20px;
+    }
+    #timeline {
+      max-width: 500px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #timeline {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .step-title {
+      font-size: 16px;
+    }
+    .step-description {
+      font-size: 14px;
+    }
+    .timeline-section {
+      padding: 20px;
+    }
+  }
