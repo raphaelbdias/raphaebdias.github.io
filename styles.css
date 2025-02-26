@@ -400,6 +400,31 @@ a:hover {
   color: #80CBC4;
 }
 
+.contact-footer {
+  background-color: #141414;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-links {
+  display: inline-flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: #FF6E40; /* or your preferred accent color */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #FFA270;
+}
+
+
 /* Responsive adjustments can be added as needed */
 
 

@@ -70,35 +70,59 @@
           </ul>
         </nav>
       </header>
-  <main class="contact-page">
-    <h1>Contact Me</h1>
-    <p>
-      Interested in working together or have any questions? 
-      Fill out the form below or send me an email at <strong>diasraphael31@gmail.com</strong>.
-    </p>
-
-    <!-- Using Formspree (Replace with your Formspree endpoint) -->
-    <form
-      class="contact-form"
-      action="https://formspree.io/f/xnnjrzqj"
-      method="POST"
-    >
-      <div>
-        <label for="name">Name <span style="color:#FF6E40;">*</span></label>
-        <input type="text" id="name" name="name" required placeholder="Enter your name" />
-      </div>
-      <div>
-        <label for="email">Email <span style="color:#FF6E40;">*</span></label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email" />
-      </div>
-      <div>
-        <label for="message">Message <span style="color:#FF6E40;">*</span></label>
-        <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
-      </div>
-      <!-- Optionally, add a hidden input for spam filtering or reference -->
-      <button type="submit">Send Message</button>
-    </form>
-  </main>
-
+      
+      <main class="contact-page">
+        <h1>Contact Me</h1>
+        <p>
+          Interested in working together or have any questions? 
+          Fill out the form below or send me an email at <strong>diasraphael31@gmail.com</strong>.
+        </p>
+      
+        <!-- Using Formspree (Replace with your Formspree endpoint) -->
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xnnjrzqj"
+          method="POST"
+        >
+          <div>
+            <label for="name">Name <span style="color:#FF6E40;">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name" />
+          </div>
+          <div>
+            <label for="email">Email <span style="color:#FF6E40;">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email" />
+          </div>
+          <div>
+            <label for="message">Message <span style="color:#FF6E40;">*</span></label>
+            <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </main>
+      
+      <!-- Social Links & Resume Download -->
+      <footer class="contact-footer">
+        <div class="social-links">
+          <a 
+            href="https://www.linkedin.com/in/raphaeldias" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a 
+            href="https://github.com/raphaelbdias" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <!-- Make sure the PDF file name and path are correct -->
+          <a href="Raphael_B_Dias_Resume.pdf" download>
+            Download Resume
+          </a>
+        </div>
+      </footer>
+      
 </body>
 </html>
