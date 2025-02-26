@@ -415,13 +415,16 @@ a:hover {
 .social-links a {
   color: #FF6E40; /* or your preferred accent color */
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
   color: #FFA270;
+}
+
+/* Adjust icon sizes or spacing if needed */
+.social-links i {
+  font-size: 1.5rem; /* Font size for icons */
 }
 
 
