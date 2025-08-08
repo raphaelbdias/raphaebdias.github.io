@@ -308,7 +308,7 @@
 <!-- Modal for Full View -->
 <div id="imageModal" class="modal">
   <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage">
+  <img class="modal-content" id="modalImage" alt="Expanded gallery image">
 </div>
 
 
@@ -358,9 +358,10 @@
     
       items.forEach(item => {
         item.addEventListener('click', function() {
-          const imgSrc = item.querySelector('img').src;
+          const imgEl = item.querySelector('img');
           modal.style.display = 'block';
-          modalImg.src = imgSrc;
+          modalImg.src = imgEl.src;
+          modalImg.alt = imgEl.alt;
         });
       });
     
