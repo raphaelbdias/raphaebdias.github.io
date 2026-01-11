@@ -5,12 +5,6 @@
     box-sizing: border-box;
   }
   
-/* Base Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Body & Global Styles */
 body {
